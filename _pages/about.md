@@ -9,9 +9,9 @@ profile:
   image: AIRob.png
   image_circular: false # crops the image to make it circular
   more_info: >
-      <p><a href="https://roomfinder.sfu.ca/apps/sfuroomfinder_web/?q=TASC18005">TASC1 8005</a></p>
-      <p>8888 University Drive</p>
-      <p>Buraby, BC, Canada V5A 1S6</p>
+    <p><a href="https://roomfinder.sfu.ca/apps/sfuroomfinder_web/?q=TASC18005">TASC1 8005</a></p>
+    <p>8888 University Drive</p>
+    <p>Buraby, BC, Canada V5A 1S6</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page

@@ -4,8 +4,8 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: AIRob Lab
-middle_name: 
-last_name: 
+middle_name:
+last_name:
 contact_note: >
   Email lab director Hang Ma if you have any questions.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"

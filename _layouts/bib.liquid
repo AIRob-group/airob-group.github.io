@@ -48,7 +48,16 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+    {% if entry.pdf %}
+      {% if entry.pdf contains '://' %}
+        {% assign pdf_url = entry.pdf %}
+      {% else %}
+        {% assign pdf_url = entry.pdf | prepend: site.external_url %}
+      {% endif %}
+    {% else %}
+      {% assign pdf_url = null %}
+    {% endif %}
+    <div class="title"><a href="{{ pdf_url }}">{{ entry.title }}</a></div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -212,11 +221,7 @@
         {% endif %}
       {% endif %}
       {% if entry.pdf %}
-        {% if entry.pdf contains '://' %}
-          <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
-        {% else %}
-          <a href="{{ entry.pdf | prepend: site.external_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
-        {% endif %}
+        <a href="{{ pdf_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
       {% endif %}
       {% if entry.supp %}
         {% if entry.supp contains '://' %}
@@ -370,6 +375,8 @@
       <!-- Hidden video block -->
       <div class="abstract hidden">
         {% if entry.video contains '://' %}
+          {% assign video_url = entry.video %}
+        {% else %}
           {% assign video_url = entry.video | prepend: site.external_url %}
         {% endif %}
         <div style="text-align: center;">{% include video.liquid path=video_url class="img-fluid rounded z-depth-1" controls=true %}</div>

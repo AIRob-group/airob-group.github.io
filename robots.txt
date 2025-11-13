@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://www2.cs.sfu.ca/~hangma/sitemap.xml
+Sitemap: https://airob-group.github.io/sitemap.xml

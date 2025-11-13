@@ -1,0 +1,1330 @@
+@phdthesis{MaThesis20,
+    keywords = {thesis},
+    author   = {Hang Ma},
+    title    = {Target Assignment and Path Planning for Navigation Tasks with Teams of Agents},
+    school   = {University of Southern California},
+    year     = {2020},
+    award    = {<a href="https://www.icaps-conference.org/icaps-awards/" target="_blank" style="color: red !important;">ICAPS 2021 Best Dissertation Award</a>},
+    runnerup = {<a href="https://aamas2021.soton.ac.uk/awards/dissertation-award/" target="_blank" style="color: red !important;">IFAAMAS 2020 Victor Lesser Distinguished Dissertation Award Runner-Up</a>},
+    youtubetalk = {award talk,https://www.youtube.com/embed/wwY_7PyL2IY},    
+    pdf = {pub/dissertation.pdf}
+}
+
+@inproceedings{TangAAAI26,
+	keywords = {conference},
+	flag = {Jingtao Tang},
+	author = {Jingtao Tang and Hang Ma},
+	title = {GHOST: Solving the Traveling Salesman Problem on Graphs of Convex Sets},
+	booktitle = {{AAAI} Conference on Artificial Intelligence},
+	shortbooktitle = {AAAI},
+	addendum = {Acceptance Rate: 4165/23680 = 17.59\%},
+	year = {2026},
+	pages = {(in print)},
+	pdf = {pub/aaai26.pdf},
+	github={https://github.com/reso1/ghost},
+	projectlink = {https://sites.google.com/view/ghost-gcs-tsp},
+	month = {January},
+	address = {Singapore},
+	abstract =
+	{}
+}
+
+@inproceedings{TangIROS25,
+	keywords = {conference},
+	flag = {Jingtao Tang && Zining Mao && Lufan Yang},
+	title={Space-Time Graphs of Convex Sets for Multi-Robot Motion Planning},
+	author={Jingtao Tang and Zining Mao and Lufan Yang and Hang Ma},
+	pages = {(in print)},
+	pdf = {pub/iros25.pdf},
+	booktitle={{IEEE/RSJ} International Conference on Intelligent Robots and System},
+	shortbooktitle = {IROS},
+	addendum = {Acceptance Rate: 1991/4306 = 46.24\%. \color{color1}Best Paper Award at the RSS 2025 Workshop on Scalable and Resilient Multi-Robot Systems},
+	year={2025},
+	month = {October},
+	address = {Hangzhou, China},
+	award = {<a href="https://mrs-workshop.github.io/rss25/" target="_blank" style="color: red !important;">Best Paper Award at the RSS 2025 Workshop on Scalable and Resilient Multi-Robot Systems</a>},
+	github={https://github.com/reso1/stgcs},
+	projectlink = {https://sites.google.com/view/stgcs},
+	abstract = 
+	{We address the Multi-Robot Motion Planning (MRMP) problem of computing collision-free trajectories for multiple robots in shared continuous environments. While existing frameworks effectively decompose MRMP into singlerobot subproblems, spatiotemporal motion planning with dynamic obstacles remains challenging, particularly in cluttered or narrow-corridor settings. We propose Space-Time Graphs of Convex Sets (ST-GCS), a novel planner that systematically covers the collision-free space-time domain with convex sets instead of relying on random sampling. By extending Graphs of Convex Sets (GCS) into the time dimension, ST-GCS formulates time-optimal trajectories in a unified convex optimization that naturally accommodates velocity bounds and flexible arrival times. We also propose Exact Convex Decomposition (ECD) to "reserve" trajectories as spatiotemporal obstacles, maintaining a collision-free space-time graph of convex sets for subsequent planning. Integrated into two prioritized-planning frameworks, ST-GCS consistently achieves higher success rates and better solution quality than state-of-the-art sampling-based planners—often at orders-of-magnitude faster runtimes—underscoring its benefits for MRMP in challenging settings.  Project page: <a href="https://sites.google.com/view/stgcs">https://sites.google.com/view/stgcs</a>.}
+}
+
+@inproceedings{TanSOCS25,
+    keywords = {conference},
+	flag = {Jiaqi Tan && Yudong Luo},
+	author = {Jiaqi Tan and Yudong Luo and Jiaoyang Li and Hang Ma},
+	title = {Reevaluation of Large Neighborhood Search for MAPF: Findings and Opportunities},
+	booktitle = {International Symposium on Combinatorial Search},
+    shortbooktitle = {SoCS},
+    addendum = {Position Paper. Acceptance Rate: 22/59 = 37.29\%},
+    pages     = {212--220},
+	year = {2025},
+    specialtrack = {Position Paper},
+	pdf = {pub/socs25.pdf},
+	github = {https://github.com/ChristinaTan0704/mapf-lns-unified},
+    month = {August},
+    address = {Glasgow, United Kingdom},
+	eqcontr = {0,1},
+	abstract = 
+	{Multi-Agent Path Finding (MAPF) aims to arrange collision-free goal-reaching paths for a group of agents. Anytime MAPF solvers based on large neighborhood search (LNS) have gained prominence recently due to their flexibility and scalability, leading to a surge of methods, especially those leveraging machine learning, to enhance neighborhood selection. However, several pitfalls exist and hinder a comprehensive evaluation of these new methods, which mainly include: 1) Lower than actual or incorrect baseline performance; 2) Lack of a unified evaluation setting and criterion; 3) Lack of a codebase or executable model for supervised learning methods. To address these challenges, we introduce a unified evaluation framework, implement prior methods, and conduct an extensive comparison of prominent methods. Our evaluation reveals that rule-based heuristics serve as strong baselines, while current learning-based methods show no clear advantage on time efficiency or improvement capacity. Our extensive analysis also opens up new research opportunities for improving MAPF-LNS, such as targeting high-delayed agents, applying contextual algorithms, optimizing replan order and neighborhood size, where machine learning can potentially be integrated.}
+}
+
+@article{TangTRO25,
+	keywords = {journal},
+	flag = {Jingtao Tang && Zining Mao},
+	title={Large-Scale Multirobot Coverage Path Planning on Grids With Path Deconfliction},
+	author={Jingtao Tang and Zining Mao and Hang Ma},
+	pdf = {pub/tro25.pdf},	
+	publisherlink = {https://doi.org/10.1109/TRO.2025.3567476},	
+	journal={IEEE Transactions on Robotics},
+	github={https://github.com/reso1/LS-MCPP},
+	shortbooktitle = {T-RO},
+	volume={41},
+	pages = {3348--3367},
+	projectlink = {https://sites.google.com/view/lsmcpp},
+	year={2025},
+	month={May},
+	abstract = 
+	{We study Multi-Robot Coverage Path Planning (MCPP) on a 4-neighbor 2D grid $G$, which aims to compute paths for multiple robots to cover all cells of $G$. Traditional approaches are limited as they first compute coverage trees on a quadrant coarsened grid $\mathcal{H}$ and then employ the Spanning Tree Coverage (STC) paradigm to generate paths on $G$, making them inapplicable to grids with partially obstructed $2 \times 2$ blocks. To address this limitation, we reformulate the problem directly on $G$, revolutionizing grid-based MCPP solving and establishing new NP-hardness results. We introduce Extended-STC (ESTC), a novel paradigm that extends STC to ensure complete coverage with bounded suboptimality, even when $\mathcal{H}$ includes partially obstructed blocks. Furthermore, we present LS-MCPP, a new algorithmic framework that integrates ESTC with three novel types of neighborhood operators within a local search strategy to optimize coverage paths directly on $G$. Unlike prior grid-based MCPP work, our approach also incorporates a versatile post-processing procedure that applies Multi-Agent Path Finding (MAPF) techniques to MCPP for the first time, enabling a fusion of these two important fields in multi-robot coordination. This procedure effectively resolves inter-robot conflicts and accommodates turning costs by solving a MAPF variant, making our MCPP solutions more practical for real-world applications. Extensive experiments demonstrate that our approach significantly improves solution quality and efficiency, managing up to 100 robots on grids as large as $256 \times 256$ within minutes of runtime. Validation with physical robots confirms the feasibility of our solutions under real-world conditions. A project page with code, demo videos, and additional resources is available at: <a href="https://sites.google.com/view/lsmcpp">https://sites.google.com/view/lsmcpp</a>.}
+}
+
+@inproceedings{LinIROS24,
+	keywords = {conference},
+	flag = {Qiushi Lin},
+	author = {Qiushi Lin and Hang Ma},
+	title = {MFC-EQ: Mean-Field Control with Envelope Q-Learning for Moving Decentralized Agents in Formation},
+	booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems},
+	shortbooktitle = {IROS},
+	addendum = {Acceptance Rate: 1587/3344 = 47.46\%},
+	year = {2024},
+	pages = {14156--14163},
+	pdf = {pub/iros24.pdf},
+	github={https://github.com/Qiushi-Lin/MFCEQ},
+	month = {October},
+	address = {Abu Dhabi, United Arab Emirates},
+	abstract =
+	{We study a decentralized version of Moving Agents in Formation (MAiF), a variant of Multi-Agent Path Finding aiming to plan collision-free paths for multiple agents with the dual objectives of reaching their goals quickly while maintaining a desired formation. The agents must balance these objectives under conditions of partial observation and limited communication. The formation maintenance depends on the joint state of all agents, whose dimensionality increases exponentially with the number of agents, rendering the learning process intractable. Additionally, learning a single policy that can accommodate different linear preferences for these two objectives presents a significant challenge. In this paper, we propose Mean-Field Control with Envelop Q-learning (MFC-EQ), a scalable and adaptable learning framework for this bi-objective multi-agent problem. We approximate the dynamics of all agents using mean-field theory while learning a universal preference-agnostic policy through envelop Q-learning. Our empirical evaluation of MFC-EQ across numerous instances shows that it outperforms state-of-the-art centralized MAiF baselines. Furthermore, MFC-EQ effectively handles more complex scenarios where the desired formation changes dynamically -- a challenge that existing MAiF planners cannot address.}
+}
+
+@inproceedings{ChenECCV24,
+keywords = {conference},
+flag = {Jiaqi Tan},
+author = {Jiacheng Chen and Yuefan Wu and Jiaqi Tan and Hang Ma and Yasutaka Furukawa},
+eqcontr = {0,1,2},
+title = {MapTracker: Tracking with Strided Memory Fusion for Consistent Vector HD Mapping},
+booktitle = {European Conference on Computer Vision},
+shortbooktitle = {ECCV},
+addendum = {Acceptance Rate: 2395/8585 = 27.90\%},
+year = {2024},
+pages = {90--107},
+projectlink = {https://map-tracker.github.io/},
+pdf = {pub/eccv24.pdf},
+github={https://github.com/woodfrog/maptracker},
+month = {October},
+address = {Milan, Italy},
+abstract = {This paper presents a vector HD-mapping algorithm that formulates the mapping as a tracking task and uses a history of memory latents to ensure consistent reconstructions over time. Our method, MapTracker, accumulates a sensor stream into memory buffers of two latent representations: 1) Raster latents in the bird’s-eye-view (BEV) space and 2) Vector latents over the road elements (i.e., pedestrian-crossings, lane-dividers, and road-boundaries). The approach borrows the query propagation paradigm from the tracking literature that explicitly associates tracked road elements from the previous frame to the current, while fusing a subset of memory latents selected with distance strides to further enhance temporal consistency. A vector latent is decoded to reconstruct the geometry of a road element. The paper further makes benchmark contributions by 1) Improving processing code for existing datasets to produce consistent ground truth with temporal alignments and 2) Augmenting existing mAP metrics with consistency checks. MapTracker significantly outperforms existing methods on both nuScenes and Agroverse2 datasets by over 8\% and 19\% on the conventional and the new consistency-aware metrics, respectively. The code will be available on our project page: <a href="https://map-tracker.github.io">https://map-tracker.github.io</a>.}
+}
+
+@inproceedings{TangICAPS24,
+	keywords = {conference},
+	flag = {Jingtao Tang},
+	author = {Jingtao Tang and Hang Ma},
+	title = {Multi-Robot Connected Fermat Spiral Coverage},
+	booktitle = {International Conference on Automated Planning and Scheduling},
+	shortbooktitle = {ICAPS},
+	addendum = {Acceptance Rate: 82/379 = 21.64\%},
+	year = {2024},
+	pages = {579--587},
+	pdf = {pub/icaps24.pdf},
+	github={https://github.com/reso1/MCFS},
+	month = {June},
+	address = {Banff, Canada},
+	abstract =
+	{We introduce the Multi-Robot Connected Fermat Spiral (MCFS), a novel algorithmic framework for Multi-Robot Coverage Path Planning (MCPP) that adapts Connected Fermat Spiral (CFS) from the computer graphics community to multi-robot coordination for the first time. MCFS uniquely enables the orchestration of multiple robots to generate coverage paths that contour around arbitrarily shaped obstacles, a feature that is notably lacking in traditional methods. Our framework not only enhances area coverage and optimizes task performance, particularly in terms of makespan, for workspaces rich in irregular obstacles but also addresses the challenges of path continuity and curvature critical for non-holonomic robots by generating smooth paths without decomposing the workspace. MCFS solves MCPP by constructing a graph of isolines and transforming MCPP into a combinatorial optimization problem, aiming to minimize the makespan while covering all vertices. Our contributions include developing a unified CFS version for scalable and adaptable MCPP, extending it to MCPP with novel optimization techniques for cost reduction and path continuity and smoothness, and demonstrating through extensive experiments that MCFS outperforms existing MCPP methods in makespan, path curvature, coverage ratio, and overlapping ratio. Our research marks a significant step in MCPP, showcasing the fusion of computer graphics and automated planning principles to advance the capabilities of multi-robot systems in complex environments. Our code is publicly available at <a href="https://github.com/reso1/MCFS">https://github.com/reso1/MCFS</a>.}
+}
+
+@inproceedings{TangAAAI24,
+	keywords = {conference},
+	flag = {Jingtao Tang},
+	author = {Jingtao Tang and Hang Ma},
+	title = {Large-Scale Multi-Robot Coverage Path Planning via Local Search},
+	booktitle = {{AAAI} Conference on Artificial Intelligence},
+	shortbooktitle = {AAAI},
+	addendum = {Acceptance Rate: 2342/9862 = 23.74\%. A short version appeared also in: \textit{International Symposium on Combinatorial Search (SoCS)}, 2024, pp. 289--290},
+	year = {2024},
+	pages = {17567--17574},
+	pdf = {pub/aaai24.pdf},
+	github={https://github.com/reso1/LS-MCPP},
+	video = {videos/aaai24.mp4},
+	month = {Feburary},
+	address = {Vancouver, Canada},
+	abstract =
+	{We study graph-based Multi-Robot Coverage Path Planning (MCPP) that aims to compute coverage paths for multiple robots to cover all vertices of a given 2D grid terrain graph $G$. Existing graph-based MCPP algorithms first compute a tree cover on $G$---a forest of multiple trees that cover all vertices---and then employ the Spanning Tree Coverage (STC) paradigm to generate coverage paths on the decomposed graph $D$ of the terrain graph $G$ by circumnavigating the edges of the computed trees, aiming to optimize the makespan (i.e., the maximum coverage path cost among all robots).
+	In this paper, we take a different approach by exploring how to systematically search for good coverage paths directly on $D$. We introduce a new algorithmic framework, called LS-MCPP, which leverages a local search to operate directly on $D$. We propose a novel standalone paradigm, Extended-STC (ESTC), that extends STC to achieve complete coverage for MCPP on any decomposed graphs, even those resulting from incomplete terrain graphs. Furthermore, we demonstrate how to integrate ESTC with three novel types of neighborhood operators into our framework to effectively guide its search process. Our extensive experiments demonstrate the effectiveness of LS-MCPP, consistently improving the initial solution returned by two state-of-the-art baseline algorithms that compute suboptimal tree covers on $G$, with a notable reduction in makespan by up to 35.7\% and 30.3\%, respectively. Moreover, LS-MCPP consistently matches or surpasses the results of optimal tree cover computation, achieving these outcomes with orders of magnitude faster runtime, thereby showcasing its significant benefits for large-scale real-world coverage tasks.}
+}
+
+@article{TangRAL23,
+	keywords = {journal},
+	flag = {Jingtao Tang},
+	title={Mixed Integer Programming for Time-Optimal Multi-Robot Coverage Path Planning with Efficient Heuristics},
+	author={Jingtao Tang and Hang Ma},
+	pdf = {pub/ral23c.pdf},	
+	publisherlink = {https://doi.org/10.1109/LRA.2023.3306996},	
+	journal={IEEE Robotics and Automation Letters},
+	github={https://github.com/reso1/MIP-MCPP},
+	video = {videos/ral23c.mp4},
+	shortbooktitle = {RA-L},
+	volume={8},
+	number={10},
+	pages = {6491--6498},
+	year={2023},
+	month={October},
+	addendum = {Also presented at: \textit{{IEEE} International Conference on
+	Robotics and Automation (ICRA)}, 2024. A short version appeared also in: \textit{International Symposium on Combinatorial Search (SoCS)}, 2024, pp. 289--290},
+	abstract = 
+	{We investigate time-optimal Multi-Robot Coverage Path Planning (MCPP) for both unweighted and weighted terrains, which aims to minimize the coverage time, defined as the maximum travel time of all robots. Specifically, we focus on a reduction from MCPP to Min-Max Rooted Tree Cover (MMRTC). For the first time, we propose a Mixed Integer Programming (MIP) model to optimally solve MMRTC, resulting in an MCPP solution with a coverage time that is provably at most four times the optimal. Moreover, we propose two suboptimal yet effective heuristics that reduce the number of variables in the MIP model, thus improving its efficiency for large-scale MCPP instances. We show that both heuristics result in reduced-size MIP models that remain complete (i.e., guaranteed to find a solution if one exists) for all MMRTC instances. Additionally, we explore the use of model optimization warm-startup to further improve the efficiency of both the original MIP model and the reduced-size MIP models. We validate the effectiveness of our MIP-based MCPP planner through experiments that compare it with two state-of-the-art MCPP planners on various instances, demonstrating a reduction in the coverage time by an average of $27.65\%$ and $23.24\%$ over them, respectively.}
+}
+
+@article{LinRAL23,
+	keywords = {journal},
+	flag = {Qiushi Lin},
+	title={SACHA: Soft Actor-Critic with Heuristic-Based Attention for Partially Observable Multi-Agent Path Finding},
+	author={Qiushi Lin and Hang Ma},
+	pdf = {pub/ral23b.pdf},	
+	publisherlink = {https://doi.org/10.1109/LRA.2023.3292004},	
+	journal={IEEE Robotics and Automation Letters},
+	github={https://github.com/Qiushi-Lin/SACHA},
+	shortbooktitle = {RA-L},
+	volume={8},
+	number={8},
+	pages = {2377--3766},
+	year={2023},
+	month={August},
+	abstract = 
+	{Multi-Agent Path Finding (MAPF) is a crucial component for many large-scale robotic systems, where agents must plan their collision-free paths to their given goal positions. Recently, multi-agent reinforcement learning has been introduced to solve the partially observable variant of MAPF by learning a decentralized single-agent policy in a centralized fashion based on each agent's partial observation. However, existing learning-based methods are ineffective in achieving complex multi-agent cooperation, especially in congested environments, due to the non-stationarity of this setting. To tackle this challenge, we propose a multi-agent actor-critic method called Soft Actor-Critic with Heuristic-Based Attention (SACHA), which employs novel heuristic-based attention mechanisms for both the actors and critics to encourage cooperation among agents. SACHA learns a neural network for each agent to selectively pay attention to the shortest path heuristic guidance from multiple agents within its field of view, thereby allowing for more scalable learning of cooperation. SACHA also extends the existing multi-agent actor-critic framework by introducing a novel critic centered on each agent to approximate $Q$-values. Compared to existing methods that use a fully observable critic, our agent-centered multi-agent actor-critic method results in more impartial credit assignment and better generalizability of the learned policy to MAPF instances with varying numbers of agents and types of environments. We also implement SACHA(C), which embeds a communication module in the agent's policy network to enable information exchange among agents. We evaluate both SACHA and SACHA(C) on a variety of MAPF instances and demonstrate decent improvements over several state-of-the-art learning-based MAPF methods with respect to success rate and solution quality.}
+}
+
+@article{LiRAL23,
+	keywords = {journal},
+	flag = {Baiyu Li},
+	title={Double-Deck Multi-Agent Pickup and Delivery: Multi-Robot Rearrangement in Large-Scale Warehouses},
+	author={Baiyu Li and Hang Ma},
+	pdf = {pub/ral23.pdf},	
+	publisherlink = {https://doi.org/10.1109/LRA.2023.3272272},	
+	video = {videos/ral23_1.mp4,videos/ral23_2.mp4},
+	journal={IEEE Robotics and Automation Letters},
+	shortbooktitle = {RA-L},
+	volume={8},
+	number={6},
+	pages = {3701--3708},
+	year={2023},
+	month={June},
+	addendum = {Also presented at: \textit{{IEEE/RSJ} International Conference on Intelligent Robots and System (IROS)}, 2023},
+	abstract = 
+	{We introduce a new problem formulation, Double-Deck Multi-Agent Pickup and Delivery (DD-MAPD), which models the multi-robot shelf rearrangement problem in automated warehouses. DD-MAPD extends both Multi-Agent Pickup and Delivery (MAPD) and Multi-Agent Path Finding (MAPF) by allowing agents to move beneath shelves or lift and deliver a shelf to an arbitrary location, thereby changing the warehouse layout. We show that solving DD-MAPD is NP-hard. To tackle DD-MAPD, we propose MAPF-DECOMP, an algorithmic framework that decomposes a DD-MAPD instance into a MAPF instance for coordinating shelf trajectories and a subsequent MAPD instance with task dependencies for computing paths for agents. We also present an optimization technique to improve the performance of MAPF-DECOMP and demonstrate how to make MAPF-DECOMP complete for well-formed DD-MAPD instances, a realistic subclass of DD-MAPD instances. Our experimental results demonstrate the efficiency and effectiveness of MAPF-DECOMP, with the ability to compute high-quality solutions for large-scale instances with over one thousand shelves and hundreds of agents in just minutes of runtime.}
+}
+
+@inproceedings{ZhengICAPS23,
+    keywords = {conference},
+	author = {Yi Zheng and Hang Ma and Sven Koenig and Erik Kline and T. K. Satish Kumar},
+	title = {Priority-Based Search for the Virtual Network Embedding Problem},
+	booktitle = {International Conference on Automated Planning and Scheduling},
+    shortbooktitle = {ICAPS},
+	addendum = {Acceptance Rate: 79/258 = 30.62\%},
+	year = {2023},
+	pages = {472--480},
+	pdf = {pub/icaps23.pdf},
+    month = {July},
+    address = {Prague, Czech Republic},
+	abstract =
+	{The Virtual Network Embedding (VNE) problem is a constrained
+optimization problem. It arises in the context of allocating
+resources on heterogeneous physical networks to provide
+end-to-end computing services. In this paper, we introduce
+a new solver, called VNE-PBS, that uses priority-based
+search (PBS) for solving the VNE problem. VNE-PBS uses a
+prioritized heuristic search algorithm that explores the space
+of all possible priority orderings using a systematic depth-first
+search. The solver is inspired by the success of PBS for the
+Multi-Agent Path Finding (MAPF) problem and the similarities
+between the VNE and MAPF problems. We show that
+VNE-PBS significantly outperforms competing methods on
+various benchmark instances for both the offline and online
+versions of the VNE problem.}
+}
+
+@article{MaAIM22,
+	keywords = {journal},
+	title={Intelligent Planning for Large-Scale Multi-Agent Systems},
+	author={Hang Ma},
+	journal={AI Magazine},
+	volume={43},
+	number={4},
+	pages={376--382},
+	pdf = {pub/aim22.pdf},
+	publisherlink = {https://doi.org/10.1002/aaai.12069},	
+	year={2022},
+	month = {December},
+	abstract =
+	{This article summarizes the New Faculty Highlights talk with the same title at
+	AAAI 2021. Intelligent agents such as different types of robots will soon become an
+	integral part of our daily lives. In real-world multi-agent systems, the most
+	fundamental challenges are assigning tasks to multiple agents (task-level
+	coordination problems) and planning collision-free paths for the agents to task
+	locations (motion-level coordination problems). This article surveys four
+	directions of our research on using intelligent planning techniques for the
+	above multi-agent coordination problems.}
+}
+
+@inproceedings{XuIROS22,
+	keywords = {conference},
+	flag = {Qinghong Xu},
+	title={Multi-Goal Multi-Agent Pickup and Delivery},
+	author={Qinghong Xu and Jiaoyang Li and Sven Koenig and Hang Ma},
+	pages = {9964--9971},
+	pdf = {pub/iros22.pdf},
+	video = {videos/iros22.mp4},
+	booktitle={{IEEE/RSJ} International Conference on Intelligent Robots and System},
+	shortbooktitle = {IROS},
+	addendum = {Acceptance Rate: 1740/3579 = 48.62\%},
+	year={2022},
+	month = {October},
+	address = {Kyoto, Japan},
+	abstract = 
+	{In this work, we consider the Multi-Agent Pickup-and-Delivery (MAPD) problem, where agents constantly engage with new tasks and need to plan collision-free paths to execute them. To execute a task, an agent needs to visit a pair of goal locations, consisting of a pickup location and a delivery location. We propose two variants of an algorithm that assigns a sequence of tasks to each agent using the anytime algorithm Large Neighborhood Search (LNS) and plans paths using the Multi-Agent Path Finding (MAPF) algorithm Priority-Based Search (PBS). LNS-PBS is complete for well-formed MAPD instances, a realistic subclass of MAPD instances, and empirically more effective than the existing complete MAPD algorithm CENTRAL. LNS-wPBS provides no completeness guarantee but is empirically more efficient and stable than LNS-PBS. It scales to thousands of agents and thousands of tasks in a large warehouse and is empirically more effective than the existing scalable MAPD algorithm HBH+MLA*. LNS-PBS and LNS-wPBS also apply to a more general variant of MAPD, namely the Multi-Goal MAPD (MG-MAPD) problem, where tasks can have different numbers of goal locations.}
+}
+
+@article{MaCRR22,
+	keywords = {journal},
+	title={Graph-Based Multi-Robot Path Finding and Planning},
+	author={Hang Ma},
+	volume={3},
+	number={3},
+	pages = {77--84},
+	pdf = {pub/crr22.pdf},
+	publisherlink = {https://rdcu.be/cPOC0},	
+	journal={Current Robotics Reports},
+	year={2022},
+	month = {June},
+	abstract = 
+	{Purpose of Review Planning collision-free paths for multiple robots is important for real-world multi-robot systems and has been studied as an optimization problem on graphs, called multi-agent path finding (MAPF). This review surveys different categories of classic and state-of-the-art MAPF algorithms and different research attempts to tackle the challenges of generalizing MAPF techniques to real-world scenarios. Recent Findings Solving MAPF problems optimally is computationally challenging. Recent advances have resulted in MAPF algorithms that can compute collision-free paths for hundreds of robots and thousands of navigation tasks in seconds of runtime. Many variants of MAPF have been formalized to adapt MAPF techniques to different real-world requirements, such as considerations of robot kinematics, online optimization for real-time systems, and the integration of task assignment and path planning. Summary Algorithmic techniques for MAPF problems have addressed important aspects of several multi-robot applications, including automated warehouse fulfillment and sortation, automated train scheduling, and navigation of non-holonomic robots and quadcopters. This showcases their potential for real-world applications of large-scale multi-robot systems.}
+}
+
+@inproceedings{ZhongICRA22,
+	keywords = {conference},
+	flag = {Xinyi Zhong},
+	title={Optimal and Bounded-Suboptimal Multi-Goal Task Assignment and Path Finding},
+	author={Xinyi Zhong and Jiaoyang Li and Sven Koenig and Hang Ma},
+	pages = {10731--10737},
+	pdf = {pub/icra22.pdf},
+	video = {videos/icra22.mp4},
+	booktitle={IEEE International Conference on Robotics and Automation},
+	shortbooktitle = {ICRA},
+	addendum = {Acceptance Rate: 1428/3313 = 43.10\%},
+	year={2022},
+	month = {May},
+	address = {Philadelphia, PA},
+	abstract = 
+	{We formalize and study the multi-goal task assignment and pathfinding
+	(MG-TAPF) problem from theoretical and algorithmic perspectives. The
+	MG-TAPF problem is to compute an assignment of tasks to agents, where
+	each task consists of a sequence of goal locations, and collision-free
+	paths for the agents that visit all goal locations of their assigned
+	tasks in sequence. Theoretically, we prove that the MG-TAPF problem is
+	NP-hard to solve optimally. We present algorithms that build upon
+	algorithmic techniques for the multi-agent pathfinding problem and
+	solve the MG-TAPF problem optimally and bounded-suboptimally. We
+	experimentally compare these algorithms on a variety of different
+	benchmark domains.}
+}
+
+@article{LiAIJ21,
+	keywords = {journal},
+	author = {Jiaoyang Li and Daniel Harabor and Peter J. Stuckey and Hang Ma and Graeme Gange and Sven Koenig},
+	title = {Pairwise Symmetry Reasoning for Multi-Agent Path Finding Search},
+	journal = {Artificial Intelligence},
+	shortbooktitle = {AIJ},
+	year={2021},
+	month = {December},
+	volume = {301},
+	pages = {103574},
+	year = {2021},
+	pdf = {pub/aij21.pdf},
+	github={https://github.com/Jiaoyang-Li/CBSH2-RTC},
+	publisherlink={https://doi.org/10.1016/j.artint.2021.103574},
+	abstract = 
+	{Multi-Agent Path Finding (MAPF) is a challenging combinatorial problem that asks us to plan collision-free paths for a team of cooperative agents. In this work, we show that one of the reasons why MAPF is so hard to solve is due to a phenomenon called pairwise symmetry, which occurs when two agents have many different paths to their target locations, all of which appear promising, but every combination of them results in a collision. We identify several classes of pairwise symmetries and show that each one arises commonly in practice and can produce an exponential explosion in the space of possible collision resolutions, leading to unacceptable runtimes for current state-of-the-art (bounded-sub)optimal MAPF algorithms. We propose a variety of reasoning techniques that detect the symmetries efficiently as they arise and resolve them by using specialized constraints to eliminate all permutations of pairwise colliding paths in a single branching step. We implement these ideas in the context of a leading optimal MAPF algorithm CBS and show that the addition of the symmetry reasoning techniques can have a dramatic positive effect on its performance — we report a reduction in the number of node expansions by up to four orders of magnitude and an increase in scalability by up to thirty times. These gains allow us to solve to optimality a variety of challenging MAPF instances previously considered out of reach for CBS.
+	}
+}
+
+@inproceedings{MaICRA21,
+    keywords = {conference},
+	flag = {Ziyuan Ma && Yudong Luo},
+	author = {Ziyuan Ma and Yudong Luo and Hang Ma},
+	title = {Distributed Heuristic Multi-Agent Path Finding with Communication},
+	booktitle = {IEEE International Conference on Robotics and Automation},
+    shortbooktitle = {ICRA},
+    addendum = {Acceptance Rate: 1946/4056 = 47.98\%},
+	year = {2021},
+	pages = {8699--8705},
+	pdf = {pub/icra21.pdf},
+	video = {videos/icra21.mp4},
+	github = {https://github.com/ZiyuanMa/DHC},
+    month = {May},
+    address = {Xi'an, China},
+	eqcontr = {0,1},
+	abstract = 
+	{Multi-Agent Path Finding (MAPF) is essential
+to large-scale robotic systems. Recent methods have applied
+reinforcement learning (RL) to learn decentralized polices in
+partially observable environments. A fundamental challenge of
+obtaining collision-free policy is that agents need to learn cooperation to handle congested situations. This paper combines
+communication with deep Q-learning to provide a novel learning based method for MAPF, where agents achieve cooperation
+via graph convolution. To guide RL algorithm on long-horizon
+goal-oriented tasks, we embed the potential choices of shortest
+paths from single source as heuristic guidance instead of using a
+specific path as in most existing works. Our method treats each
+agent independently and trains the model from a single agent’s
+perspective. The final trained policy is applied to each agent for
+decentralized execution. The whole system is distributed during
+training and is trained under a curriculum learning strategy.
+Empirical evaluation in obstacle-rich environment indicates the
+high success rate with low average step of our method.}
+}
+
+@inproceedings{MaICAPS21,
+    keywords = {conference},
+	author = {Hang Ma},
+	title = {A Competitive Analysis of Online Multi-Agent Path Finding},
+	booktitle = {International Conference on Automated Planning and Scheduling},
+    shortbooktitle = {ICAPS},
+	year = {2021},
+	pages = {234--242},
+	pdf = {pub/icaps21a.pdf},
+	slideslive = {SoCS-21 talk,38964090},
+    month = {August},
+    address = {Guangzhou, China},
+	abstract = 
+	{We study online Multi-Agent Path Finding (MAPF), where
+new agents are constantly revealed over time and all agents
+must find collision-free paths to their given goal locations. We
+generalize existing complexity results of (offline) MAPF to
+online MAPF. We classify online MAPF algorithms into different categories based on (1) controllability (the set of agents
+that they can plan paths for at each time) and (2) rationality
+(the quality of paths they plan) and study the relationships between them. We perform a competitive analysis for each category of online MAPF algorithms with respect to commonlyused objective functions. We show that a naive algorithm
+that routes newly-revealed agents one at a time in sequence
+achieves a competitive ratio that is asymptotically bounded
+from both below and above by the number of agents with
+respect to flowtime and makespan. We then show a counterintuitive result that, if rerouting of previously-revealed agents
+is not allowed, any rational online MAPF algorithms, including ones that plan optimal paths for all newly-revealed agents,
+have the same asymptotic competitive ratio as the naive algorithm, even on 2D 4-neighbor grids. We also derive constant
+lower bounds on the competitive ratio of any rational online
+MAPF algorithms that allow rerouting. The results thus provide theoretical insights into the effectiveness of using MAPF
+algorithms in an online setting for the first time.}
+}
+
+@inproceedings{LiICAPS21,
+    keywords = {conference},
+	author = {Jiaoyang Li and Zhe Chen and Yi Zheng and Shao-Hung Chan and Daniel Harabor and Peter J. Stuckey and Hang Ma and Sven Koenig},
+	title = {Scalable Rail Planning and Replanning: Winning the 2020 Flatland Challenge},
+	booktitle = {International Conference on Automated Planning and Scheduling},
+    shortbooktitle = {ICAPS},
+    addendum = {\color{color1}ICAPS 2021 People's Choice Best System Demonstration Award. Winner of the NeurIPS 2020 Flatland Challenge},
+	year = {2021},
+	award = {<a href="https://icaps21.icaps-conference.org/awards/" target="_blank" style="color: red !important;">ICAPS 2021 People's Choice Best System Demonstration Award</a> && <a href="https://discourse.aicrowd.com/t/neurips-2020-flatland-winners/4010" target="_blank" style="color: red !important;">Winner of Both Rounds of the NeurIPS-20 Flatland Challenge (Team An_Old_Driver)</a>},
+	pages = {477--485},
+	pdf = {pub/icaps21b.pdf},
+	demolink = {LiICAPS21Demo.html},
+	slideslive = {NeurIPS-21 talk,38942745 && SoCS-21 talk,38964051},
+	video = {videos/icaps21b.mp4},
+	github = {https://github.com/Jiaoyang-Li/Flatland},
+    month = {August},
+    address = {Guangzhou, China},
+	abstract = 
+	{Multi-Agent Path Finding (MAPF) is the combinatorial problem of finding collision-free paths for multiple agents on a
+graph. This paper describes MAPF-based software for solving train planning and replanning problems on large-scale
+rail networks under uncertainty. The software recently won
+the 2020 Flatland Challenge, a NeurIPS competition trying to determine how to efficiently manage dense traffic on
+rail networks. The software incorporates many state-of-theart MAPF or, in general, optimization technologies, such as
+prioritized planning, large neighborhood search, safe interval path planning, minimum communication policies, parallel computing, and simulated annealing. It can plan collisionfree paths for thousands of trains within a few minutes and
+deliver deadlock-free actions in real-time during execution.}
+}
+
+@inproceedings{KouAAAI20,
+	keywords = {conference},
+	author = {Ngai Meng Kou and Cheng Peng and Hang Ma and T. K. Satish Kumar and Sven Koenig},
+	title = {Idle Time Optimization for Target Assignment and Path Finding in Sortation Centers},
+	booktitle = {{AAAI} Conference on Artificial Intelligence},
+	shortbooktitle = {AAAI},
+	addendum = {Acceptance Rate: 1591/7737 = 20.56\%},
+	year = {2020},
+	pages = {9925--9932},
+	pdf = {pub/aaai20.pdf},
+	media = {media: Aliyun (Chinese),https://developer.aliyun.com/article/750695 && media: Synced (Chinese),https://www.jiqizhixin.com/articles/2020-03-05-2},
+	month =        {February},
+	address =      {New York, NY},
+	abstract = 
+	{In this paper, we study the one-shot and lifelong versions
+of the Target Assignment and Path Finding problem in automated sortation centers, where each agent needs to constantly assign itself a sorting station, move to its assigned station without colliding with obstacles or other agents, wait in
+the queue of that station to obtain a parcel for delivery, and
+then deliver the parcel to a sorting bin. The throughput of
+such centers is largely determined by the total idle time of all
+stations since their queues can frequently become empty. To
+address this problem, we first formalize and study the oneshot version that assigns stations to a set of agents and finds
+collision-free paths for the agents to their assigned stations.
+We present efficient algorithms for this task based on a novel
+min-cost max-flow formulation that minimizes the total idle
+time of all stations in a fixed time window. We then demonstrate how our algorithms for solving the one-shot problem
+can be applied to solving the lifelong problem as well. Experimentally, we believe to be the first researchers to consider real-world automated sortation centers using an industrial simulator with realistic data and a kinodynamic model
+of real robots. On this simulator, we showcase the benefits of
+our algorithms by demonstrating their efficiency and effectiveness for up to 350 agents.}
+}
+
+@inproceedings{LiAAMAS20,
+	keywords = {conference},
+	author = {Jiaoyang Li and Kexuan Sun and Hang Ma and Ariel Felner and T. K. Satish Kumar and Sven Koenig},
+	title = {Moving Agents in Formation in Congested Environments},
+	booktitle = {International Conference on Autonomous Agents and Multiagent Systems},
+	shortbooktitle = {AAMAS},
+	addendum = {Acceptance Rate: 186/808 = 23.02\%},
+	year = {2020},
+	pages = {726--734},
+	pdf = {pub/aamas20.pdf},
+	video = {videos/aamas20_1.mp4,videos/aamas20_2.mp4,videos/aamas20_3.mp4},
+	month = {May},
+	address = {Auckland, New Zealand},
+	abstract = 
+	{In this paper, we formalize and study the Moving Agents in Formation (MAiF) problem, that combines the tasks of finding short
+collision-free paths for multiple agents and keeping them in close
+adherence to a desired formation. Previous work includes controller-based algorithms, swarm-based algorithms, and potential-field-based algorithms. They usually focus on only one or the other of
+these tasks, solve the problem greedily without systematic search,
+and thus generate costly solutions or even fail to find solutions in
+congested environments. In this paper, we develop a two-phase
+search algorithm, called SWARM-MAPF, whose first phase is inspired by swarm-based algorithms (in open regions) and whose
+second phase is inspired by multi-agent path-finding (MAPF) algorithms (in congested regions). In the first phase, SWARM-MAPF
+selects a leader among the agents and finds a path for it that is
+sufficiently far away from the obstacles so that the other agents
+can preserve the desired formation around it. It also identifies the
+critical segments of the leader’s path where the other agents cannot preserve the desired formation and the refinement of which
+has thus to be delegated to the second phase. In the second phase,
+SWARM-MAPF refines these segments. Theoretically, we prove that
+SWARM-MAPF is complete. Empirically, we show that SWARM-MAPF scales well and is able to find close-to-optimal solutions.}
+}
+
+@inproceedings{LiICAPS20,
+    keywords = {conference},
+	author = {Jiaoyang Li and Graeme Gange and Daniel Harabor and Peter J. Stuckey and Hang Ma and Sven Koenig},
+	title = {New Techniques for Pairwise Symmetry Breaking in Multi-Agent Path Finding},
+    addendum = {Acceptance Rate: 69/216 = 31.94\%},
+	booktitle = {International Conference on Automated Planning and Scheduling},
+    shortbooktitle = {ICAPS},
+	year = {2020},
+	pages = {193--201},
+    pdf = {pub/icaps20.pdf},
+    month = {June},
+    address = {Nancy, France},
+	abstract = 
+	{We consider two new classes of pairwise path symmetries
+which appear in the context of Multi-Agent Path Finding
+(MAPF). The first of them, corridor symmetry, arises when
+two agents attempt to pass through the same narrow passage
+in opposite directions. The second, target symmetry, arises
+when the shortest path of one agent passes through the target
+location of a second agent after the second agent has already
+arrived at it. These symmetries can produce an exponential
+explosion in the space of possible collision resolutions, leading to unacceptable runtimes even for state-of-the-art MAPF
+algorithms such as Conflict-Based Search (CBS). We propose to break these symmetries using new reasoning techniques that: (1) detect each class of symmetry and (2) resolve
+them by introducing specialized constraints. We experimentally show that our techniques can, in some cases, more than
+double the success rate of CBS and improve its runtime by
+one order of magnitude.}
+}
+
+@inproceedings{MaAAAI19a,
+    keywords = {conference},
+	author = {Hang Ma and Daniel Harabor and Peter J. Stuckey and Jiaoyang Li and Sven Koenig},
+	title = {Searching with Consistent Prioritization for Multi-Agent Path Finding},
+	booktitle = {{AAAI} Conference on Artificial Intelligence},
+    shortbooktitle = {AAAI},
+    addendum = {Acceptance Rate: 1150/7095 = 16.21\%. A short version appeared also in: \textit{International Symposium on Combinatorial Search (SoCS)}, 2019, pp. 188--189},
+    pages     = {7643--7650},
+	year = {2019},
+    pdf = {pub/aaai19a.pdf},
+    month =        {January},
+    address =      {Honolulu, HI},
+	abstract = 
+	{We study prioritized planning for Multi-Agent Path Finding
+(MAPF). Existing prioritized MAPF algorithms depend on
+rule-of-thumb heuristics and random assignment to determine
+a fixed total priority ordering of all agents a priori. We instead
+explore the space of all possible partial priority orderings as
+part of a novel systematic and conflict-driven combinatorial
+search framework. In a variety of empirical comparisons,
+we demonstrate state-of-the-art solution qualities and success
+rates, often with similar runtimes to existing algorithms.
+We also develop new theoretical results that explore the
+limitations of prioritized planning, in terms of completeness
+and optimality, for the first time.}
+}
+
+@inproceedings{MaAAAI19b,
+    keywords = {conference},
+	author = {Hang Ma and Wolfgang H\"{o}nig and T. K. Satish Kumar and Nora Ayanian and Sven Koenig},
+	title = {Lifelong Path Planning with Kinematic Constraints for Multi-Agent Pickup and Delivery},
+	booktitle = {{AAAI} Conference on Artificial Intelligence},
+    shortbooktitle = {AAAI},
+    addendum = {Acceptance Rate: 1150/7095 = 16.21\%. A short version appeared also in: \textit{International Symposium on Combinatorial Search (SoCS)}, 2019, pp. 190--191},
+    pages     = {7651--7658},
+	year = {2019},
+    pdf = {pub/aaai19b.pdf},
+    supp = {pub/aaai19b_supp.pdf},
+    videos = {MaAAAI19bVideos.html},
+    month =        {January},
+    address =      {Honolulu, HI},
+	abstract = 
+	{The Multi-Agent Pickup and Delivery (MAPD) problem
+models applications where a large number of agents attend
+to a stream of incoming pickup-and-delivery tasks. Token
+Passing (TP) is a recent MAPD algorithm that is efficient
+and effective. We make TP even more efficient and effective
+by using a novel combinatorial search algorithm, called Safe
+Interval Path Planning with Reservation Table (SIPPwRT),
+for single-agent path planning. SIPPwRT uses an advanced
+data structure that allows for fast updates and lookups of the
+current paths of all agents in an online setting. The resulting
+MAPD algorithm TP-SIPPwRT takes kinematic constraints
+of real robots into account directly during planning, computes continuous agent movements with given velocities that
+work on non-holonomic robots rather than discrete agent
+movements with uniform velocity, and is complete for well-formed MAPD instances. We demonstrate its benefits for
+automated warehouses using both an agent simulator and a
+standard robot simulator. For example, we demonstrate that
+it can compute paths for hundreds of agents and thousands
+of tasks in seconds and is more efficient and effective than
+existing MAPD algorithms that use a post-processing step to
+adapt their paths to continuous agent movements with given
+velocities.}
+}
+
+
+@inproceedings{LiAAAI19a,
+    keywords = {conference},
+	author = {Jiaoyang Li and Pavel Surynek and Ariel Felner and Hang Ma and T. K. Satish Kumar and Sven Koenig},
+	title = {Multi-Agent Path Finding for Large Agents},
+	booktitle = {{AAAI} Conference on Artificial Intelligence},
+    shortbooktitle = {AAAI},
+    addendum = {Acceptance Rate: 1150/7095 = 16.21\%. A short version appeared also in: \textit{International Symposium on Combinatorial Search (SoCS)}, 2019, pp. 186--187},
+    pages     = {7627--7634},
+	year = {2019},
+    pdf = {pub/aaai19c.pdf},
+    month =        {January},
+    address =      {Honolulu, HI},
+	abstract = 
+	{Multi-Agent Path Finding (MAPF) has been widely studied
+in the AI community. For example, Conflict-Based Search
+(CBS) is a state-of-the-art MAPF algorithm based on a twolevel tree-search. However, previous MAPF algorithms assume that an agent occupies only a single location at any
+given time, e.g., a single cell in a grid. This limits their applicability in many real-world domains that have geometric
+agents in lieu of point agents. Geometric agents are referred
+to as "large" agents because they can occupy multiple points
+at the same time. In this paper, we formalize and study LA-MAPF, i.e., MAPF for large agents. We first show how CBS
+can be adapted to solve LA-MAPF. We then present a generalized version of CBS, called Multi-Constraint CBS (MC-CBS), that adds multiple constraints (instead of one constraint) for an agent when it generates a high-level search
+node. We introduce three different approaches to choose
+such constraints as well as an approach to compute admissible heuristics for the high-level search. Experimental results show that all MC-CBS variants outperform CBS by up
+to three orders of magnitude in terms of runtime. The best
+variant also outperforms EPEA* (a state-of-the-art A*-based
+MAPF solver) in all cases and MDD-SAT (a state-of-the-art
+reduction-based MAPF solver) in some cases.}
+}
+
+@inproceedings{LiAAAI19b,
+    keywords = {conference},
+	author = {Jiaoyang Li and Daniel Harabor and Peter J. Stuckey and Hang Ma and Sven Koenig},
+	title = {Symmetry-Breaking Constraints for Grid-Based Multi-Agent Path Finding},
+	booktitle = {{AAAI} Conference on Artificial Intelligence},
+    shortbooktitle = {AAAI},
+    addendum = {Acceptance Rate: 1150/7095 = 16.21\%. A short version appeared also in: \textit{International Symposium on Combinatorial Search (SoCS)}, 2019, pp. 184--185},
+    pages     = {6087--6095},
+	year = {2019},
+    pdf = {pub/aaai19d.pdf},
+    github = {https://github.com/Jiaoyang-Li/CBSH2},
+    month =        {January},
+    address =      {Honolulu, HI},
+	abstract = 
+	{We describe a new way of reasoning about symmetric collisions for Multi-Agent Path Finding (MAPF) on 4-neighbor
+grids. We also introduce a symmetry-breaking constraint to
+resolve these conflicts. This specialized technique allows us
+to identify and eliminate, in a single step, all permutations of
+two currently assigned but incompatible paths. Each such permutation has exactly the same cost as a current path, and each
+one results in a new collision between the same two agents.
+We show that the addition of symmetry-breaking techniques
+can lead to an exponential reduction in the size of the search
+space of CBS, a popular framework for MAPF, and report
+significant improvements in both runtime and success rate
+versus CBSH and EPEA* – two recent and state-of-the-art
+MAPF algorithms.}
+}
+
+@inproceedings{LiIJCAI19,
+    keywords = {conference},
+	author = {Jiaoyang Li and Eli Boyarski and Ariel Felner and Hang Ma and Sven Koenig},
+	title = {Improved Heuristics for Multi-Agent Path Finding with Conflict-Based Search},
+	booktitle = {International Joint Conference on Artificial Intelligence},
+    shortbooktitle = {IJCAI},
+    note = {A short version appeared also in: \textit{International Symposium on Combinatorial Search (SoCS)}, 2019},
+    addendum = {Acceptance Rate: 850/4752 = 17.89\%},
+    pages     = {442--449},
+	year = {2019},
+    pdf = {pub/ijcai19.pdf},
+    github = {https://github.com/Jiaoyang-Li/CBSH2},
+    month =        {August},
+    address =      {Macao, China},
+	abstract = 
+	{Conflict-Based Search (CBS) and its enhancements
+are among the strongest algorithms for Multi-Agent
+Path Finding. Recent work introduced an admissible heuristic to guide the high-level search of CBS.
+In this work, we prove the limitation of this heuristic, as it is based on cardinal conflicts only. We
+then introduce two new admissible heuristics by
+reasoning about the pairwise dependencies between
+agents. Empirically, CBS with either new heuristic
+significantly improves the success rate over CBS
+with the recent heuristic and reduces the number of
+expanded nodes and runtime by up to a factor of 50.}
+}
+
+@inproceedings{LiuAAMAS19,
+    keywords = {conference},
+	author = {Minghua Liu and Hang Ma and Jiaoyang Li and Sven Koenig},
+	title = {Task and Path Planning for Multi-Agent Pickup and Delivery},
+	booktitle = {International Conference on Autonomous Agents and Multiagent Systems},
+    shortbooktitle = {AAMAS},
+    addendum = {Acceptance Rate: 189/781 = 24.20\%},
+    pages     = {2253--2255},
+	year = {2019},
+    pdf = {pub/aamas19a.pdf},
+    month = {May},
+    address = {Montreal, Canada},
+	abstract = 
+	{We study the offline Multi-Agent Pickup-and-Delivery (MAPD) problem,
+where a team of agents has to execute a batch of tasks with release times
+in a known environment. To execute a task, an agent has to move first
+from its current location to the pickup location of the task and then to
+the delivery location of the task. The MAPD problem is to assign tasks to
+agents and plan collision-free paths for them to execute their tasks. Online
+MAPD algorithms can be applied to the offline MAPD problem, but do
+not utilize all of the available information and may thus not be effective.
+Therefore, we present two novel offline MAPD algorithms that improve
+a state-of-the-art online MAPD algorithm with respect to task planning,
+path planning, and deadlock avoidance for the offline MAPD problem. Our
+MAPD algorithms first compute one task sequence for each agent by solving
+a special traveling salesman problem and then plan paths according to these
+task sequences. We also introduce an effective deadlock avoidance method,
+called "reserving dummy paths." Theoretically, our MAPD algorithms are
+complete for well-formed MAPD instances, a realistic subclass of all MAPD
+instances. Experimentally, they produce solutions of smaller makespans
+and scale better than the online MAPD algorithm in simulated warehouses
+with hundreds of robots and thousands of tasks.}
+}
+
+@inproceedings{WangAAMAS19,
+    keywords = {short},
+	author = {Jiangxing Wang and Jiaoyang Li and Hang Ma and Sven Koenig and T. K. Satish Kumar},
+	title = {A New Constraint Satisfaction Perspective on Multi-Agent Path Finding},
+	booktitle = {International Conference on Autonomous Agents and Multiagent Systems},
+    shortbooktitle = {AAMAS},
+    pages     = {417--423},
+	year = {2019},
+	addendum = {Extended Abstract},
+    specialtrack = {Extended Abstract},
+    pdf = {pub/aamas19b.pdf},
+    month = {May},
+    address = {Montreal, Canada},
+	abstract = 
+	{In this paper, we adopt a new perspective on the Multi-Agent Path
+Finding (MAPF) problem and view it as a Constraint Satisfaction
+Problem (CSP). A variable corresponds to an agent, its domain
+is the set of all paths from the start vertex to the goal vertex of
+the agent, and the constraints allow only conflict-free paths for
+each pair of agents. Although the domains and constraints are only
+implicitly defined, this new CSP perspective allows us to use successful techniques from CSP search. With the concomitant idea of
+using matrix computations for calculating the size of the reduced
+domain of an uninstantiated variable, we apply Dynamic Variable
+Ordering and Rapid Random Restarts to the MAPF problem. In our
+experiments, the resulting simple polynomial-time MAPF solver,
+called Matrix MAPF solver, either outperforms or matches the performance of many state-of-the-art solvers for the MAPF problem
+and its variants.}
+}
+
+@inproceedings{LiICAPS19,
+    keywords = {short},
+	author = {Jiaoyang Li and Daniel Harabor and Peter J. Stuckey and Ariel Felner and Hang Ma and Sven Koenig},
+	title = {Disjoint Splitting for Conflict-Based Search for Multi-Agent Path Finding},
+    addendum = {Short Paper. Acceptance Rate: 69/209 = 33.01\%},
+	booktitle = {International Conference on Automated Planning and Scheduling},
+    shortbooktitle = {ICAPS},
+    pages     = {279--283},
+	year = {2019},
+    pdf = {pub/icaps19.pdf},
+    month = {July},
+    address = {Berkeley, CA},
+	abstract = 
+	{Multi-Agent Path Finding (MAPF) is the planning problem
+of finding collision-free paths for a team of agents. We focus on Conflict-Based Search (CBS), a two-level tree-search
+state-of-the-art MAPF algorithm. The standard splitting strategy used by CBS is not disjoint, i.e., when it splits a problem
+into two subproblems, some solutions are shared by both subproblems, which can create duplication of search effort. In
+this paper, we demonstrate how to improve CBS with disjoint
+splitting and how to modify the low-level search of CBS to
+take maximal advantage of it. Experiments show that disjoint
+splitting increases the success rates and speeds of CBS and
+its variants by up to 2 orders of magnitude.}
+}
+
+@inproceedings{SternSOCS19,
+    keywords = {conference},
+	author = {Roni Stern and Nathan Sturtevant and Ariel Felner and Sven Koenig and Hang Ma and Thayne Walker and Jiaoyang Li and Dor Atzmon and Liron Cohen and T. K. Satish Kumar and Eli Boyarski and Roman Bartak},
+	title = {Multi-Agent Pathfinding: Definitions, Variants, and Benchmarks},
+	booktitle = {International Symposium on Combinatorial Search},
+    shortbooktitle = {SoCS},
+    addendum = {Position Paper. Acceptance Rate: 14/31 = 45.16\%},
+    pages     = {151--159},
+	year = {2019},
+    specialtrack = {Position Paper},
+    pdf = {pub/socs19a.pdf},
+    month = {July},
+    address = {Napa, CA},
+	abstract = 
+	{The Multi-Agent Pathfinding (MAPF) problem is the fundamental problem of planning paths for multiple agents, where
+the key constraint is that the agents will be able to follow
+these paths concurrently without colliding with each other.
+Applications of MAPF include automated warehouses and
+autonomous vehicles. Research on MAPF has been flourishing in the past couple of years. Different MAPF research papers make different assumptions, e.g., whether agents can traverse the same road at the same time, and have different objective functions, e.g., minimize makespan or sum of agents’
+actions costs. These assumptions and objectives are sometimes implicitly assumed or described informally. This makes
+it difficult to establish appropriate baselines for comparison in
+research papers, as well as making it difficult for practitioners
+to find the papers relevant to their concrete application. This
+paper aims to fill this gap and support researchers and practitioners by providing a unifying terminology for describing
+common MAPF assumptions and objectives. In addition, we
+also provide pointers to two MAPF benchmarks. In particular, we introduce a new grid-based benchmark for MAPF,
+and demonstrate experimentally that it poses a challenge to
+contemporary MAPF algorithms.}
+}
+
+@article{KoenigAIMATTERS19,
+    keywords = {journal},
+    author    = {Sven Koenig and Sanmay Das and Rosemary D. Paradis and John P. Dickerson and Yolanda Gil and Katherine Guo and Benjamin Kuipers and Iolanda Leite and Hang Ma and Nicholas Mattei and Amy McGovern and Larry Medsker and Todd W. Neller and Marion Neumann and Plamen Petrov and Michael Rovatsos and David G. Stork},
+    title     = {{ACM} {SIGAI} Activity Report},
+    journal   = {{AI} Matters},
+    volume    = {5},
+    number    = {3},
+    pages     = {6--11},
+    year      = {2019},
+    pdf = {pub/aimatters19.pdf},
+	abstract = 
+	{We are happy to present the annual activity
+report of the ACM Special Interest Group on
+AI (ACM SIGAI), covering the period from July
+2018 to June 2019.}
+}
+
+@inproceedings{MaIJCAI18,
+    keywords = {conference},
+	author = {Hang Ma and Glenn Wagner and Ariel Felner and Jiaoyang Li and T. K. Satish Kumar and Sven Koenig},
+	title = {Multi-Agent Path Finding with Deadlines},
+	booktitle = {International Joint Conference on Artificial Intelligence},
+    shortbooktitle = {IJCAI},
+    addendum = {Acceptance Rate: 710/3470 = 20.64\%},
+    pages     = {417--423},
+	year = {2018},
+    pdf = {pub/ijcai18a.pdf},
+    month = {July},
+    address = {Stockholm, Sweden},
+	abstract = 
+	{We formalize Multi-Agent Path Finding with Deadlines (MAPF-DL). The objective is to maximize the
+number of agents that can reach their given goal
+vertices from their given start vertices within the
+deadline, without colliding with each other. We
+first show that MAPF-DL is NP-hard to solve optimally. We then present two classes of optimal algorithms, one based on a reduction of MAPF-DL to
+a flow problem and a subsequent compact integer
+linear programming formulation of the resulting
+reduced abstracted multi-commodity flow network
+and the other one based on novel combinatorial
+search algorithms. Our empirical results demonstrate that these MAPF-DL solvers scale well and
+each one dominates the other ones in different scenarios.}
+}
+
+@inproceedings{CohenIJCAI18,
+    keywords = {conference},
+	author = {Liron Cohen and Mat\'{i}as Greco and Hang Ma and Carlos Hernandez and Ariel Felner and T. K. Satish Kumar and Sven Koenig},
+	title = {Anytime Focal Search with Applications},
+	booktitle = {International Joint Conference on Artificial Intelligence},
+    shortbooktitle = {IJCAI},
+    addendum = {Acceptance Rate: 710/3470 = 20.64\%},
+    pages     = {1434--1441},
+	year = {2018},
+    pdf = {pub/ijcai18b.pdf},
+    month = {July},
+    address = {Stockholm, Sweden},
+	abstract = 
+	{Focal search (FS) is a bounded-suboptimal search
+(BSS) variant of A*. Like A*, it uses an open list
+whose states are sorted in increasing order of their
+f-values. Unlike A*, it also uses a focal list containing all states from the open list whose f-values
+are no larger than a suboptimality factor times the
+smallest f-value in the open list. In this paper, we
+develop an anytime version of FS, called anytime
+FS (AFS), that is useful when deliberation time is
+limited. AFS finds a "good" solution quickly and
+refines it to better and better solutions if time allows. It does this refinement efficiently by reusing
+previous search efforts. On the theoretical side, we
+show that AFS is bounded suboptimal and that anytime potential search (ATPS/ANA*), a state-of-theart anytime bounded-cost search (BCS) variant of
+A*, is a special case of AFS. In doing so, we bridge
+the gap between anytime search algorithms based
+on BSS and BCS. We also identify different properties of priority functions, used to sort the focal
+list, that may allow for efficient reuse of previous search efforts. On the experimental side, we
+demonstrate the usefulness of AFS for solving hard
+combinatorial problems, such as the generalized
+covering traveling salesman problem and the multi-agent pathfinding problem.}
+}
+
+@inproceedings{MaAAMAS18,
+    keywords = {short},
+	author = {Hang Ma and Glenn Wagner and Ariel Felner and Jiaoyang Li and T. K. Satish Kumar and Sven Koenig},
+	title = {Multi-Agent Path Finding with Deadlines: Preliminary Results},
+	booktitle = {International Conference on Autonomous Agents and Multiagent Systems},
+    shortbooktitle = {AAMAS},
+    pages     = {2004--2006},
+	year = {2018},
+	addendum = {Extended Abstract},
+    specialtrack = {Extended Abstract},
+    pdf = {pub/aamas18.pdf},
+    month = {July},
+    address = {Stockholm, Sweden},
+	abstract = 
+	{We formalize the problem of multi-agent path finding with deadlines (MAPF-DL). The objective is to maximize the number of
+agents that can reach their given goal vertices from their given
+start vertices within a given deadline, without colliding with each
+other. We first show that the MAPF-DL problem is NP-hard to solve
+optimally. We then present an optimal MAPF-DL algorithm based
+on a reduction of the MAPF-DL problem to a flow problem and a
+subsequent compact integer linear programming formulation of
+the resulting reduced abstracted multi-commodity flow network.}
+}
+
+@inproceedings{FelnerICAPS18,
+    keywords = {short},
+	author = {Ariel Felner and Jiaoyang Li and Eli Boyarski and Hang Ma and Liron Cohen and T. K. Satish Kumar and Sven Koenig},
+	title = {Adding Heuristics to Conflict-Based Search for Multi-Agent Pathfinding},
+    addendum = {Short Paper. Acceptance Rate: 69/209 = 33.01\%},
+	booktitle = {International Conference on Automated Planning and Scheduling},
+    shortbooktitle = {ICAPS},
+    pages     = {83--87},
+	year = {2018},
+    pdf = {pub/icaps18.pdf},
+    github = {https://github.com/Jiaoyang-Li/CBSH2},
+    month = {June},
+    address = {Delft, Netherlands},
+	abstract = 
+	{Conflict-Based Search (CBS) and its enhancements are
+among the strongest algorithms for the multi-agent pathfinding problem. However, existing variants of CBS do not
+use any heuristics that estimate future work. In this paper, we
+introduce different admissible heuristics for CBS by aggregating cardinal conflicts among agents. In our experiments,
+CBS with these heuristics outperforms previous state-of-theart CBS variants by up to a factor of five.}
+}
+
+@article{KoenigAIMATTERS18,
+    keywords = {journal},
+    author    = {Sven Koenig and Sanmay Das and Rosemary D. Paradis and John P. Dickerson and Yolanda Gil and Katherine Guo and Benjamin Kuipers and Hang Ma and Nicholas Mattei and Amy McGovern and Larry Medsker and Todd W. Neller and Plamen Petrov and Michael Rovatsos and David G. Stork},
+    title     = {{ACM} {SIGAI} Activity Report},
+    journal   = {{AI} Matters},
+    volume    = {4},
+    number    = {3},
+    pages     = {7--11},
+    year      = {2018},
+    pdf = {pub/aimatters18.pdf},
+	abstract = 
+	{We are happy to present the annual activity
+report of ACM SIGAI, covering the period from
+July 2017 to June 2018.}
+}
+
+@inproceedings{MaAAAI17,
+    keywords = {conference},
+	author = {Hang Ma and T. K. Satish Kumar and Sven Koenig},
+	title = {Multi-Agent Path Finding with Delay Probabilities},
+	booktitle = {{AAAI} Conference on Artificial Intelligence},
+    shortbooktitle = {AAAI},
+	pages = {3605--3612},
+    addendum = {Acceptance Rate: 638/2590 = 24.63\%},
+	year = {2017},
+    pdf = {pub/aaai17.pdf},
+    month = {February},
+    address = {San Francisco, CA},
+	abstract = 
+	{Several recently developed Multi-Agent Path Finding
+(MAPF) solvers scale to large MAPF instances by searching
+for MAPF plans on 2 levels: The high-level search resolves
+collisions between agents, and the low-level search plans
+paths for single agents under the constraints imposed by
+the high-level search. We make the following contributions
+to solve the MAPF problem with imperfect plan execution
+with small average makespans: First, we formalize the
+MAPF Problem with Delay Probabilities (MAPF-DP),
+define valid MAPF-DP plans and propose the use of
+robust plan-execution policies for valid MAPF-DP plans
+to control how each agent proceeds along its path. Second,
+we discuss 2 classes of decentralized robust plan-execution
+policies (called Fully Synchronized Policies and Minimal
+Communication Policies) that prevent collisions during plan
+execution for valid MAPF-DP plans. Third, we present a
+2-level MAPF-DP solver (called Approximate Minimization
+in Expectation) that generates valid MAPF-DP plans.}
+}
+
+@inproceedings{MaAAMAS17,
+    keywords = {conference},
+	author = {Hang Ma and Jiaoyang Li and T. K. Satish Kumar and Sven Koenig},
+	title = {Lifelong Multi-Agent Path Finding for Online Pickup and Delivery Tasks},
+	booktitle = {International Conference on Autonomous Agents and Multiagent Systems},
+    shortbooktitle = {AAMAS},
+	pages = {837--845},
+    addendum = {Acceptance Rate: 155/595 = 26.05\%},
+	year = {2017},
+    pdf = {pub/aamas17.pdf},
+    slides = {pub/aamas17_slides.pdf},
+    month = {May},
+    address = {S\~{a}o Paulo, Brazil},
+	abstract = 
+	{The multi-agent path-finding (MAPF) problem has recently
+received a lot of attention. However, it does not capture
+important characteristics of many real-world domains, such
+as automated warehouses, where agents are constantly
+engaged with new tasks. In this paper, we therefore study
+a lifelong version of the MAPF problem, called the multi-agent pickup and delivery (MAPD) problem. In the MAPD
+problem, agents have to attend to a stream of delivery tasks
+in an online setting. One agent has to be assigned to each
+delivery task. This agent has to first move to a given pickup
+location and then to a given delivery location while avoiding
+collisions with other agents. We present two decoupled
+MAPD algorithms, Token Passing (TP) and Token Passing
+with Task Swaps (TPTS). Theoretically, we show that they
+solve all well-formed MAPD instances, a realistic subclass
+of MAPD instances. Experimentally, we compare them
+against a centralized strawman MAPD algorithm without
+this guarantee in a simulated warehouse system. TP can
+easily be extended to a fully distributed MAPD algorithm
+and is the best choice when real-time computation is of primary concern since it remains efficient for MAPD instances
+with hundreds of agents and tasks. TPTS requires limited
+communication among agents and balances well between TP
+and the centralized MAPD algorithm.}
+}
+
+@article{MaIEEE17,
+    keywords = {journal},
+	author = {Hang Ma and Wolfgang H\"{o}nig and Liron Cohen and Tansel Uras and Hong Xu and T. K. Satish Kumar and Nora Ayanian and Sven Koenig},
+	title = {Overview: A Hierarchical Framework for Plan Generation and Execution in Multi-Robot Systems},
+	journal = {IEEE Intelligent Systems},
+    year={2017},
+    volume={32},
+    number={6},
+    pages={6-12},
+    publisherlink={http://ieeexplore.ieee.org/document/8268002/},
+    pdf = {pub/ieee17.pdf},
+    video = {videos/overview1.mp4},
+	abstract = 
+	{NA}
+}
+
+@article{MaAIMATTERS17,
+    keywords = {journal},
+	author = {Hang Ma and Sven Koenig},
+	title = {{AI} Buzzwords Explained: Multi-Agent Path Finding ({MAPF})},
+	journal = {AI Matters},
+    volume = {3},
+    number = {3},
+    pages = {15--19},
+	year = {2017},
+    pdf = {pub/aimatters17.pdf},
+	abstract = 
+	{A framework for
+coordinating taskand motion-level
+operations for
+many robots uses
+informed search to
+find causally feasible
+solutions and simple
+temporal networks
+to include kinematic
+constraints and react
+to dynamic changes.}
+}
+
+@inproceedings{MaAIIDE17,
+    keywords = {short},
+	author = {Hang Ma and Jingxing Yang and Liron Cohen and T. K. Satish Kumar and Sven Koenig},
+	title = {Feasibility Study: Moving Non-Homogeneous Teams in Congested Video Game Environments},
+	booktitle = {AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment},
+    shortbooktitle = {AIIDE},
+	pages = {270--272},
+	year = {2017},
+	addendum = {Demo Track},
+    specialtrack = {Demo Track},
+    pdf = {pub/aiide17.pdf},
+    demolink = {MaAIIDE17Demo.html},
+    month = {October},
+    address = {Snowbird, UT},
+	abstract = 
+	{Multi-agent path finding (MAPF) is a well-studied problem
+in artificial intelligence, where one needs to find collisionfree paths for agents with given start and goal locations.
+In video games, agents of different types often form teams.
+In this paper, we demonstrate the usefulness of MAPF algorithms from artificial intelligence for moving such non-homogeneous teams in congested video game environments.}
+}
+
+@inproceedings{HoenigIJCAI17,
+    keywords = {short},
+	author = {Wolfgang H\"{o}nig and T. K. Satish Kumar and Liron Cohen and Hang Ma and Hong Xu and Nora Ayanian and Sven Koenig},
+	title = {Summary: Multi-Agent Path Finding with Kinematic Constraints},
+	booktitle = {International Joint Conference on Artificial Intelligence},
+    shortbooktitle = {IJCAI},
+	pages = {4869--4873},
+    addendum = {Sister Conference Best Paper Track (Invited)},
+	year = {2017},
+    specialtrack = {Sister Conference Best Paper Track},
+    pdf = {pub/ijcai17.pdf},
+    month = {October},
+    address = {Melbourne, Australia},
+	abstract = 
+	{Multi-Agent Path Finding (MAPF) is well studied
+in both AI and robotics. Given a discretized environment and agents with assigned start and goal locations, MAPF solvers from AI find collision-free
+paths for hundreds of agents with user-provided
+sub-optimality guarantees. However, they ignore
+that actual robots are subject to kinematic constraints (such as velocity limits) and suffer from
+imperfect plan-execution capabilities. We therefore introduce MAPF-POST to postprocess the output of a MAPF solver in polynomial time to create a plan-execution schedule that can be executed
+on robots. This schedule works on non-holonomic
+robots, considers kinematic constraints, provides a
+guaranteed safety distance between robots, and exploits slack to avoid time-intensive replanning in
+many cases. We evaluate MAPF-POST in simulation and on differential-drive robots, showcasing
+the practicality of our approach.}
+}
+
+@inproceedings{MaAAAI16,
+    keywords = {conference},
+	author = {Hang Ma and Craig Tovey and Guni Sharon and T. K. Satish Kumar and Sven Koenig},
+	title = {Multi-Agent Path Finding with Payload Transfers and the Package-Exchange Robot-Routing Problem},
+	booktitle = {{AAAI} Conference on Artificial Intelligence},
+    shortbooktitle = {AAAI},
+	pages = {3166--3173},
+    addendum = {Acceptance Rate: 549/2132 = 25.75\%},
+	year = {2016},
+    pdf = {pub/aaai16.pdf},
+    month = {February},
+    address = {Phoenix, AZ},
+	abstract = 
+	{We study transportation problems where robots have to deliver packages and can transfer the packages among each other.
+Specifically, we study the package-exchange robot-routing
+problem (PERR), where each robot carries one package,
+any two robots in adjacent locations can exchange their
+packages, and each package needs to be delivered to a given
+destination. We prove that exchange operations make all
+PERR instances solvable. Yet, we also show that PERR is
+NP-hard to approximate within any factor less than 4/3 for
+makespan minimization and is NP-hard to solve for flowtime
+minimization, even when there are only two types of packages. Our proof techniques also generate new insights into
+other transportation problems, for example, into the hardness
+of approximating optimal solutions to the standard multi-agent path-finding problem (MAPF). Finally, we present
+optimal and suboptimal PERR solvers that are inspired by
+MAPF solvers, namely a flow-based ILP formulation and
+an adaptation of conflict-based search. Our empirical results
+demonstrate that these solvers scale well and that PERR
+instances often have smaller makespans and flowtimes than
+the corresponding MAPF instances.}
+}
+
+@inproceedings{MaAAMAS16,
+    keywords = {conference},
+	author = {Hang Ma and Sven Koenig},
+	title = {Optimal Target Assignment and Path Finding for Teams of Agents},
+	booktitle = {International Conference on Autonomous Agents and Multiagent Systems},
+    shortbooktitle = {AAMAS},
+	pages = {1144--1152},
+    addendum = {Acceptance Rate: 137/550 = 24.91\%. \color{color1}Invited for journal publication},
+	year = {2016},
+    pdf = {pub/aamas16.pdf},
+    slides = {pub/aamas16_slides.pdf},
+    month = {May},
+    address = {Singapore},
+	abstract = 
+	{We study the TAPF (combined target-assignment and pathfinding) problem for teams of agents in known terrain, which
+generalizes both the anonymous and non-anonymous multi-agent path-finding problems. Each of the teams is given
+the same number of targets as there are agents in the team.
+Each agent has to move to exactly one target given to its
+team such that all targets are visited. The TAPF problem
+is to first assign agents to targets and then plan collisionfree paths for the agents to their targets in a way such that
+the makespan is minimized. We present the CBM (Conflict-Based Min-Cost-Flow) algorithm, a hierarchical algorithm
+that solves TAPF instances optimally by combining ideas
+from anonymous and non-anonymous multi-agent pathfinding algorithms. On the low level, CBM uses a mincost max-flow algorithm on a time-expanded network to
+assign all agents in a single team to targets and plan
+their paths. On the high level, CBM uses conflict-based
+search to resolve collisions among agents in different teams.
+Theoretically, we prove that CBM is correct, complete and
+optimal. Experimentally, we show the scalability of CBM
+to TAPF instances with dozens of teams and hundreds of
+agents and adapt it to a simulated warehouse system.}
+}
+
+@inproceedings{HoenigICAPS16,
+    keywords = {conference},
+	author = {Wolfgang H\"{o}nig and T. K. Satish Kumar and Liron Cohen and Hang Ma and Hong Xu and Nora Ayanian and Sven Koenig},
+	title = {Multi-Agent Path Finding with Kinematic Constraints},
+	booktitle = {International Conference on Automated Planning and Scheduling},
+    shortbooktitle = {ICAPS},
+	pages = {477--485},
+    addendum = {Acceptance Rate: 65/184 = 35.33\%. \color{color1}Outstanding Paper Award in the Robotics Track of ICAPS 2016},
+	year = {2016},
+    award = {<a href="https://icaps16.icaps-conference.org/awards.html" target="_blank" style="color: red !important;">Outstanding Paper Award in the Robotics Track of ICAPS 2016</a>},
+    pdf = {pub/icaps16.pdf},
+    video = {videos/icaps16.mp4},
+    projectlink = {http://act.usc.edu/motion-coordination.html},
+    month = {June},
+    address = {London, United Kingdom},
+	abstract = 
+	{Multi-Agent Path Finding (MAPF) is well studied in both AI
+and robotics. Given a discretized environment and agents
+with assigned start and goal locations, MAPF solvers from
+AI find collision-free paths for hundreds of agents with user-provided sub-optimality guarantees. However, they ignore
+that actual robots are subject to kinematic constraints (such
+as finite maximum velocity limits) and suffer from imperfect
+plan-execution capabilities. We therefore introduce MAPF-POST, a novel approach that makes use of a simple temporal
+network to postprocess the output of a MAPF solver in polynomial time to create a plan-execution schedule that can be
+executed on robots. This schedule works on non-holonomic
+robots, takes their maximum translational and rotational velocities into account, provides a guaranteed safety distance
+between them, and exploits slack to absorb imperfect plan executions and avoid time-intensive replanning in many cases.
+We evaluate MAPF-POST in simulation and on differential-drive robots, showcasing the practicality of our approach.}
+}
+
+@inproceedings{HoenigIROS16,
+    keywords = {conference},
+	author = {Wolfgang H\"{o}nig and T. K. Satish Kumar and Hang Ma and Nora Ayanian and Sven Koenig},
+	title = {Formation Change for Robot Groups in Occluded Environments},
+	booktitle = {{IEEE/RSJ} International Conference on Intelligent Robots and System},
+    shortbooktitle = {IROS},
+	pages = {4836--4842},
+    addendum = {Acceptance Rate: 832/1719 = 48.40\%},
+	year = {2016},
+    pdf = {pub/iros16.pdf},
+    video = {videos/iros16.mp4},
+    projectlink = {http://act.usc.edu/motion-coordination.html},
+    publisherlink={https://ieeexplore.ieee.org/document/7759710/},
+    month = {October},
+    address = {Daejeon, Korea},
+	abstract = 
+	{Path planning for multiple robots is well studied
+in the AI and robotics communities. For a given discretized
+environment, robots need to find collision-free paths to a set
+of specified goal locations. Robots can be fully anonymous,
+non-anonymous, or organized in groups. Although powerful
+solvers for this abstract problem exist, they make simplifying assumptions by ignoring kinematic constraints, making it
+difficult to use the resulting plans on actual robots. In this
+paper, we present a solution which takes kinematic constraints,
+such as maximum velocities, into account, while guaranteeing
+a user-specified minimum safety distance between robots. We
+demonstrate our approach in simulation and on real robots in
+2D and 3D environments.
+}
+}
+
+@inproceedings{MaWOMAPF16,
+    keywords = {workshop},
+	author = {Hang Ma and Sven Koenig and Nora Ayanian and Liron Cohen and Wolfgang H\"{o}nig and T. K. Satish Kumar and Tansel Uras and Hong Xu and C. Tovey and G. Sharon},	
+	title = {Overview: Generalizations of Multi-Agent Path Finding to Real-World Scenarios},
+	booktitle = {{IJCAI}-16 Workshop on Multi-Agent Path Finding},
+    shortbooktitle = {WoMAPF},
+	year = {2016},
+    pdf = {pub/ijcai-workshop16.pdf},
+    media = {Synced (Chinese),https://www.jiqizhixin.com/articles/2017-04-10-7},
+    month = {July},
+    address = {New York City, NY},
+	abstract = 
+	{Multi-agent path finding (MAPF) is well-studied
+in artificial intelligence, robotics, theoretical
+computer science and operations research. We
+discuss issues that arise when generalizing MAPF
+methods to real-world scenarios and four research
+directions that address them. We emphasize the
+importance of addressing these issues as opposed
+to developing faster methods for the standard
+formulation of the MAPF problem.}
+}
+
+@inproceedings{MorrisPLANHS16,	
+    keywords = {workshop},
+	author = {Robert Morris and Corina Pasareanu and Kasper Luckow and Waqar Malik and Hang Ma and T. K. Satish Kumar and Sven Koenig},
+	title = {Planning, Scheduling and Monitoring for Airport Surface Operations},
+	booktitle = {{AAAI}-16 Workshop on Planning for Hybrid Systems},
+    shortbooktitle = {PlanHS},
+	pages = {608--614},
+	year = {2016},
+    pdf = {pub/aaai-workshop16.pdf},
+    month = {February},
+    address = {Phoenix, AZ},
+	abstract = 
+	{This paper explores the problem of managing movements of
+aircraft along the surface of busy airports. Airport surface
+management is a complex logistics problem involving the
+coordination of humans and machines. The work described
+here arose from the idea that autonomous towing vehicles for
+taxiing aircraft could offer a solution to the ’capacity problem’ for busy airports, the problem of getting more efficient
+use of existing surface area to meet increasing demand. Supporting autonomous surface operations requires continuous
+planning, scheduling and monitoring of operations, as well
+as systems for optimizing complex human-machine interaction. We identify a set of computational subproblems of the
+surface management problem that would benefit from recent
+advances in multi-agent planning and scheduling and probabilistic predictive modeling, and discuss preliminary work
+at integrating these components into a prototype of a surface
+management system.}
+}
+
+@inproceedings{HoenigSCR16,
+    keywords = {workshop},
+	author = {Wolfgang H\"{o}nig and T. K. Satish Kumar and Liron Cohen and Hang Ma and Sven Koenig and Nora Ayanian},	
+	booktitle = {Southern California Robotics Symposium},
+    shortbooktitle = {SCR},
+	title = {Path Planning with Kinematic Constraints for Robot Groups},
+	year = {2016},
+    pdf = {pub/scr16.pdf},
+    poster = {pub/scr16_poster.pdf},
+    month = {April},
+    address = {San Diego, CA},
+	abstract = 
+	{Path planning for multiple robots is well studied
+in the AI and robotics communities. For a given discretized
+environment, robots need to find collision-free paths to a set
+of specified goal locations. Robots can be fully anonymous,
+non-anonymous, or organized in groups. Although powerful
+solvers for this abstract problem exist, they make simplifying assumptions by ignoring kinematic constraints, making it
+difficult to use the resulting plans on actual robots. In this
+paper, we present a solution which takes kinematic constraints,
+such as maximum velocities, into account, while guaranteeing
+a user-specified minimum safety distance between robots. We
+demonstrate our approach in simulation and on real robots in
+2D and 3D environments.}
+}
+
+@inproceedings{MaAAAI15,
+    keywords = {conference},
+	author = {Hang Ma and Joelle Pineau},	
+	title = {Information Gathering and Reward Exploitation of Subgoals for {POMDPs}},
+	booktitle = {{AAAI} Conference on Artificial Intelligence},
+    shortbooktitle = {AAAI},
+	pages = {3320--3326},
+    addendum = {Acceptance Rate: 531/1991 = 26.67\%},
+	year = {2015},
+    pdf = {pub/aaai15.pdf},
+    slides = {pub/aaai15_slides.pdf},
+    month = {January},
+    address = {Austin, TX},
+	abstract = 
+	{Planning in large partially observable Markov decision processes (POMDPs) is challenging especially when a long
+planning horizon is required. A few recent algorithms successfully tackle this case but at the expense of a weaker
+information-gathering capacity. In this paper, we propose <i>Information Gathering and Reward Exploitation of Subgoals</i>
+(IGRES), a randomized POMDP planning algorithm that
+leverages information in the state space to automatically generate "macro-actions" to tackle tasks with long planning horizons, while locally exploring the belief space to allow effective information gathering. Experimental results show that
+IGRES is an effective multi-purpose POMDP solver, providing state-of-the-art performance for both long horizon planning tasks and information-gathering tasks on benchmark domains. Additional experiments with an ecological adaptive
+management problem indicate that IGRES is a promising tool
+for POMDP planning in real-world settings.}
+}

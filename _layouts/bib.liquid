@@ -1,6 +1,6 @@
 ---
 ---
-<a class="anchor" id="{{ entry.key }}"/>
+<a class="anchor" id="{{ entry.key }}" />
 <div class="row">
   {% if site.enable_publication_thumbnails %}
     <div class="col col-sm-2 abbr">
@@ -58,7 +58,9 @@
     {% else %}
       {% assign pdf_url = null %}
     {% endif %}
-    <div class="title"><a href="{{ pdf_url }}">{{ entry.title }}</a></div>
+    <div class="title">
+      <a href="{{ pdf_url }}">{{ entry.title }}</a>
+    </div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}

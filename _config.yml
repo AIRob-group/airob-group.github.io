@@ -7,12 +7,9 @@ first_name: AIRob Lab
 middle_name:
 last_name:
 contact_note: >
-  Email lab director Hang Ma if you have any questions.
+  Email lab director Hang Ma at hangma<at>sfu.ca if you have any questions.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 keywords: SFU, CS, Canada, research, multi-robot systems, multi-robot coordination, robotics, AI, automated planning # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: airob_favicon.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -32,7 +29,7 @@ back_to_top: true # set to false to disable the back to top button
 repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_theme_dark: dark # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_trophies:
-  enabled: true
+  enabled: false
   theme_light: flat # https://github.com/ryo-ma/github-profile-trophy
   theme_dark: gitdimmed # https://github.com/ryo-ma/github-profile-trophy
 

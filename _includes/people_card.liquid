@@ -1,0 +1,36 @@
+<div class="col-sm-auto text-center mb-3 w-25">
+  <a href="{% if profile.intro %}#{{ profile.firstname }}_{{ profile.lastname }}{% endif %}">
+    <div class="card h-100 hoverable">
+      {% if profile.image %}
+        {% assign profile_image_path = profile.image | prepend: 'assets/img/profiles/' %}
+      {% else %}
+        {% assign profile_image_path = 'assets/img/profiles/robot.png' %}
+      {% endif %}
+      {%
+        include figure.liquid
+        loading="eager"
+        path=profile_image_path
+        sizes="150px"
+        alt="profile thumbnail"
+        class="card-img-top"
+      %}
+      <span clase="card-title">
+        {{ profile.firstname }}
+        {{ profile.lastname }}
+        {% case profile.type %}
+          {% when 'F_PHD' -%}
+            (Ph.D.)
+          {% when 'F_MSC' -%}
+            (M.Sc.)
+          {% when 'F_UNDERGRAD' -%}
+            (Undergrad)
+          {% when 'F_VISITOR' -%}
+            (Visitor)
+        {% endcase -%}
+      </span>
+      <div class="row ml-1 mr-1 p-0 justify-content-center">
+        {% include profile_social.liquid people_card=people_card %}
+      </div>
+    </div>
+  </a>
+</div>

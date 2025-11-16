@@ -1,0 +1,48 @@
+<a class="anchor" id="{{ profile.firstname }}_{{ profile.lastname }}"></a>
+<div class="border my-3" style="border-radius: 10px">
+  <div class="border-bottom text-center" style=" background-color: #e9ecef; border-radius: 10px 10px 0 0;">
+    <b>
+      {{- profile.firstname }}
+      {{ profile.lastname }}
+      {% case profile.type %}
+        {% when 'PHD' %}
+          (Ph.D. Student)
+        {% when 'MSC' %}
+          (M.Sc. Student)
+        {% when 'UNDERGRAD' %}
+          (Undergrad Student)
+        {% when 'VISITOR' %}
+          (Visitor)
+        {% when 'F_PHD' %}
+          (Former Ph.D. Student)
+        {% when 'F_MSC' %}
+          (Former M.Sc. Student)
+        {% when 'F_UNDERGRAD' %}
+          (Former Undergrad Student)
+        {% when 'F_VISITOR' %}
+          (Former Visitor)
+      {% endcase %}
+    </b>
+  </div>
+  <div class="row align-items-center m-0 p-0">
+    <div class="col-sm-2 mt-1 p-0 text-center">
+      {% if profile.image %}
+        {% assign profile_image_path = profile.image | prepend: 'assets/img/profiles/' %}
+      {% else %}
+        {% assign profile_image_path = 'assets/img/profiles/robot.png' %}
+      {% endif %}
+      {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+      {% include figure.liquid loading="eager" path=profile_image_path class=profile_image_class width="100px" alt=profile.image %}
+    </div>
+    <div class="col-sm-10 p-0 mt-1">
+      {{ profile.intro }}
+    </div>
+  </div>
+  <div class="row align-items-center m-0 p-0">
+    <div class="col-sm-2 mt-1 p-0 text-center"></div>
+    <div class="col-sm-10 publications w-100 py-0 m-0">
+      {% assign query_name = profile.firstname | slice: 0 | prepend: '. ' | prepend: profile.lastname %}
+      {% bibliography --group_by none --query @*[author~={{ query_name }}] %}
+    </div>
+  </div>
+</div>

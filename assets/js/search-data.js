@@ -30,8 +30,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-repos",
-          title: "Repos",
+        },{id: "nav-repositories",
+          title: "Repositories",
           description: "Github repositories for our research.",
           section: "Navigation",
           handler: () => {
@@ -452,6 +452,27 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("mailto:%68%61%6E%67%6D%61 %61%74 %73%66%75 %64%6F%74 %63%61", "_blank");
+        },
+      },{
+        id: 'social-ieee',
+        title: 'IEEE Xplore',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://ieeexplore.ieee.org/author/37088998793/", "_blank");
+        },
+      },{
+        id: 'social-orcid',
+        title: 'ORCID',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://orcid.org/0000-0002-0602-0999", "_blank");
+        },
+      },{
+        id: 'social-researchgate',
+        title: 'ResearchGate',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.researchgate.net/profile/Hang-Ma-3/", "_blank");
         },
       },{
         id: 'social-scholar',

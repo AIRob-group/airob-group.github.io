@@ -16,12 +16,17 @@
         {% endif %}
         {% for item in news limit: news_limit %}
           <tr>
-            <th scope="row" style="width: 20%">{{ item.date | date: '%b %d, %Y' }}</th>
+            {% if item.date %}
+              {% assign new_date = item.date %}
+            {% else %}
+              {% assign new_date = item.last_modified_at %}
+            {% endif %}
+            <th scope="row" style="width: 20%">{{ new_date | date: '%b, %Y' }}</th>
             <td>
-              {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-              {% else %}
+              {% if item.not_inline %}
                 <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+              {% else %}
+                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
               {% endif %}
             </td>
           </tr>

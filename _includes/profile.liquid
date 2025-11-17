@@ -36,6 +36,15 @@
     </div>
     <div class="col-sm-10 p-0 mt-1">
       {{ profile.intro }}
+      {% if profile.positions %}
+        {% for job in profile.positions %}
+          {% if forloop.first %}
+            <div><i class="fa-solid fa-briefcase"></i> Last seen: {{ job }}</div>
+          {% else %}
+            <div><i class="fa-solid fa-briefcase"></i> Previously seen: {{ job }}</div>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
     </div>
   </div>
   <div class="row align-items-center m-0 p-0">

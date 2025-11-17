@@ -1,4 +1,4 @@
-<div class="col-sm-auto text-center mb-3 w-25">
+<div class="col-sm-auto text-center mb-3">
   <a href="{% if profile.intro %}#{{ profile.firstname }}_{{ profile.lastname }}{% endif %}">
     <div class="card h-100 hoverable">
       {% if profile.image %}
@@ -11,10 +11,11 @@
         loading="eager"
         path=profile_image_path
         sizes="150px"
+        width="75%"
         alt="profile thumbnail"
         class="card-img-top"
       %}
-      <span clase="card-title">
+      <span class="card-title">
         {{ profile.firstname }}
         {{ profile.lastname }}
         {% case profile.type %}

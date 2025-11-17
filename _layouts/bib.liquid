@@ -70,6 +70,11 @@
         {% assign author_array_limit = site.max_author_limit %}
       {% endif %}
 
+      {%- if entry.eqcontr -%}
+        {%- assign eqcontr_raw = entry.eqcontr | default: '' -%}
+        {%- assign eqcontr_list = eqcontr_raw | replace: ' ', '' | split: ',' -%}
+      {% endif %}
+
       {%- for author in entry.author_array limit: author_array_limit -%}
         {% assign author_is_self = false %}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
@@ -89,13 +94,25 @@
             {%- endif -%}
           {% endfor %}
         {%- endif -%}
-
+        {%- for profile in site.data.profiles -%}
+          {% if profile.lastname | downcase | remove_accents == clean_last_name %}
+            {% if profile.firstname == author.first %}
+              {%- assign coauthor_url = relative_url | append: '/people#' | append: profile.firstname | append: '_' | append: profile.lastname -%}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
         {%- if forloop.length > 1 -%}
           {% if forloop.first == false -%}
             {%- if forloop.length > 2 %}, {% elsif forloop.length == 2 %}  {% endif %}
           {%- endif %}
           {%- if forloop.last and author_array_limit == author_array_size %}and {% endif -%}
         {% endif %}
+        {%- assign idx = forloop.index | minus: 1 | append: '' -%}
+        {%- if entry.eqcontr %}
+          {%- if eqcontr_list contains idx -%}
+            {%- assign author_last_html = author_last_html | append: '<sup>*</sup>' -%}
+          {%- endif -%}
+        {%- endif -%}
         {%- if author_is_self -%}
           <em>
             {{- author.first }}
@@ -158,6 +175,9 @@
         >
         </i>
       {% endif %}
+      {%- if entry.eqcontr -%}
+        <span> (<sup>*</sup> Equal contribution) </span>
+      {%- endif -%}
     </div>
 
     <!-- Journal/Book title and date -->

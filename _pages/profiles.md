@@ -15,9 +15,8 @@ PI:
 ---
 
 <div class="projects">
-
-  <div class="row align-items-start">
-    <div class="col-md-auto text-center mb-1">
+  <div class="row row-cols-1 row-cols-md-4 align-items-start">
+    <div class="col-md-3 text-center mb-1">
       <a href="https://www2.cs.sfu.ca/~hangma/">
         <div class="card h-100 hoverable">
         {% assign profile_image_path = page.PI.image | prepend: 'assets/img/profiles/' %}
@@ -37,18 +36,18 @@ PI:
         </div>
       </a>
     </div>
-    <div class="col-md">
-      <h2 class="mt-3">Hang Ma</h2>
+    <div class="col-md-9">
+      <h2>Hang Ma</h2>
       <p class="mb-1">
         Director, AIRob Lab<br>
         Assistant Professor, School of Computing Science
       </p>
       <p class="mb-1">
-      <i class="fa-solid fa-house fa-fw"></i> <a href="https://roomfinder.sfu.ca/apps/sfuroomfinder_web/?q=TASC18223">TASC1 8223</a>, Simon Fraser University<br>
+      <i class="fa-solid fa-map-marker-alt fa-fw"></i> <a href="https://roomfinder.sfu.ca/apps/sfuroomfinder_web/?q=TASC18223">TASC1 8223</a>, Simon Fraser University<br>
       <i class="fa-solid fa-envelope fa-fw"></i> hangma at sfu dot ca<br>
       <br>
       </p>
-      <p class="mt-1">
+      <p>
         Hang Ma is an Assistant Professor in the School of Computing Science at Simon Fraser University,
         where he leads the Autonomous Intelligent Robotics Lab (AIRob Lab). His research focuses on
         automated planning and multi-robot coordination, spanning both AI and robotics communities.

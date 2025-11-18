@@ -25,22 +25,29 @@ layout: default
     <!-- News -->
     {% if page.announcements and page.announcements.enabled %}
       <h2>
+        <br>
         <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
       </h2>
       {% include news.liquid limit=true %}
+      <a href="{{ '/news/' | relative_url }}">More news</a>
     {% endif %}
 
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
+        <br>
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Recent Publications</a>
       </h2>
       <div class="publications">
         {% bibliography --group_by none --offset 1 --max 5 %}
       </div>
+      <a href="{{ '/publications/' | relative_url }}">Full list of publications</a>
     {% endif %}
 
-    <h3>Contact Information</h3>
+    <h3>
+      <br>
+      Contact Information
+    </h3>
     <p>
       <i class="fa-solid fa-map-marker-alt fa-fw"></i> <a href="https://roomfinder.sfu.ca/apps/sfuroomfinder_web/?q=TASC18005">TASC1 8005</a>, Simon
       Fraser University<br>

@@ -16,11 +16,11 @@
         {% endif %}
         {% for item in news limit: news_limit %}
           <tr>
-            {% if item.date %}
-              {% assign new_date = item.date %}
-            {% else %}
-              {% assign new_date = item.last_modified_at %}
-            {% endif %}
+            {% assign parts = item.name | split: '-' %}
+            {% assign year = parts[0] %}
+            {% assign month = parts[1] %}
+            {% assign day = parts[2] %}
+            {% assign new_date = year | append: '-' | append: month | append: '-' | append: day %}
             <th scope="row" style="width: 20%">{{ new_date | date: '%b, %Y' }}</th>
             <td>
               {% if item.not_inline %}

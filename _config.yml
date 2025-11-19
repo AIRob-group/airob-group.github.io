@@ -287,8 +287,7 @@ enable_publication_badges:
   inspirehep: false # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
-filtered_bibtex_keywords:
-  [
+filtered_bibtex_keywords: [
     abbr,
     abstract,
     addendum,
@@ -302,6 +301,8 @@ filtered_bibtex_keywords:
     bibtex_show,
     blog,
     code,
+    demolink
+    eqcontr,
     flag,
     google_scholar_id,
     github,
@@ -312,10 +313,16 @@ filtered_bibtex_keywords:
     poster,
     preview,
     projectlink,
+    publisherlink,
+    runnerup,
     selected,
     slides,
+    slideslive
+    specialtrack,
     supp,
     video,
+    videos,
+    youtubetalk,
     website,
   ]
 

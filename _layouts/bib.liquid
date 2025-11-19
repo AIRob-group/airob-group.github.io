@@ -219,12 +219,6 @@
 
     <!-- Links/Buttons -->
     <div class="links">
-      {% if entry.award %}
-        <a class="award btn btn-sm z-depth-0" role="button"
-          ><i class="fas fa-trophy"></i>
-          {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
-        </a>
-      {% endif %}
       {% if entry.abstract %}
         <a class="abstract btn btn-sm z-depth-0" role="button"><i class="far fa-file-alt"></i> Abs</a>
       {% endif %}
@@ -287,6 +281,9 @@
       {% endif %}
       {% if entry.projectlink %}
         <a href="{{ entry.projectlink }}" class="btn btn-sm z-depth-0" role="button"><i class="fas fa-external-link-alt"></i> Project</a>
+      {% endif %}
+      {% if entry.publisherlink %}
+        <a href="{{ entry.publisherlink }}" class="btn btn-sm z-depth-0" role="button"><i class="fas fa-building"></i> Publisher</a>
       {% endif %}
       {% if entry.slides %}
         {% if entry.slides contains '://' %}
@@ -385,10 +382,17 @@
     {% endif %}
 
     {% if entry.award %}
-      <!-- Hidden Award block -->
-      <div class="award hidden d-print-inline">
-        <p>{{ entry.award | markdownify }}</p>
-      </div>
+      {% assign award_list = entry.award | split: '&&' %}
+      {% for award_entry in award_list %}
+        <div class="m-0 p-0" style="color: var(--global-theme-color) !important;"><i class="fas fa-trophy fa-fw"></i> {{ award_entry }}</div>
+      {% endfor %}
+    {% endif %}
+
+    {% if entry.runnerup %}
+      {% assign runnerup_list = entry.runnerup | split: '&&' %}
+      {% for runnerup_entry in runnerup_list %}
+        <div class="m-0 p-0" style="color: var(--global-theme-color) !important;"><i class="fa-solid fa-medal fa-fw"></i> {{ runnerup_entry }}</div>
+      {% endfor %}
     {% endif %}
 
     {% if entry.abstract %}

@@ -1,29 +1,34 @@
 - lastname: Assari
   firstname: Ryan
   type: PHD
+  email: maa154 at sfu dot ca
   intro:
 
 - lastname: Mao
   firstname: Zining
   type: PHD
+  email: zander_mao at sfu dot ca
   image: ZiningMao.jpg
   intro: Zining received an M.Sc. in Computing Science from our lab at Simon Fraser University in 2025 and a B.Sc. in Computer Science from New York University Shanghai in 2021. He is interested in reinforcement learning and multi-agent systems.
 
 - lastname: Sun
   firstname: Dingyi
   type: PHD
+  email: dingyi_sun at sfu dot ca
   image: DingyiSun.jpg
   intro: Dingyi received a B.Eng. in Electrical Engineering and Automation from Huazhong University of Science and Technology in 2018 and an M.S. in Electrical and Computer Engineering (Robotics Track) from the University of Michigan in 2020. He is interested in path planning, machine learning, and robotic perception.
 
 - lastname: Tan
   firstname: Jiaqi
   type: PHD
+  email: jiaqi_tan at sfu dot ca
   intro: Jiaqi received a B.Eng. in Computer Science and Technology from Shenzhen University in 2019 and an M.Sc. in Computing Science from Simon Fraser University in 2022.
   github: https://github.com/ChristinaTan0704
 
 - lastname: Tang
   firstname: Jingtao
   type: PHD
+  email: jingtao_tang at sfu dot ca
   image: JingtaoTang.jpg
   intro: Jingtao received a B.Eng. and an M.S., both in Software Engineering from East China Normal University, in 2018 and 2021, respectively. His research interests include planning and scheduling, multi-agent systems, combinatorial optimization, and machine learning. More information can be found on his <a href="https://reso1.github.io/blog/" target="_blank">homepage</a>.
   webpage: https://reso1.github.io/blog/
@@ -33,16 +38,19 @@
 - lastname: Yang
   firstname: Lufan
   type: PHD
+  email: lufan_yang at sfu dot ca
   intro:
 
 - lastname: Yang
   firstname: Yifan
   type: PHD
+  email: yifan_yang_6 at sfu dot ca
   intro: Yifan received a B.Eng. and an M.Eng., both in Computer Science and Technology from Harbin Institute of Technology, in 2020 and 2024, respectively.
 
 - lastname: Samuel
   firstname: Ervin
   type: MSC
+  email: esa95 at sfu dot ca
   image: ErvinSamuel.jpg
   intro: Ervin received a B.Sc. in Computer Science from National Tsing Hua University in 2022. He is interested in artificial intelligence, particularly reinforcement learning and its application to path planning.
   linkedin: https://www.linkedin.com/in/ervinsamuel/

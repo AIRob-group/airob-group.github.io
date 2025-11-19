@@ -1,3 +1,10 @@
+{% if profile.email %}
+  <div class="email-icon">
+    <div class="icon mx-1" data-toggle="tooltip" title="Email">
+      <a href="mailto:{{ profile.email | encode_email }}"><i class="fa-solid fa-envelope fa-lg"></i></a>
+    </div>
+  </div>
+{% endif %}
 {% if profile.webpage %}
   <div class="webpage-icon">
     <div class="icon mx-1" data-toggle="tooltip" title="Personal Webpage">
@@ -15,7 +22,7 @@
 {% if profile.google_scholar %}
   <div class="google-scholar-icon">
     <div class="icon mx-1" data-toggle="tooltip" title="Google Scholar">
-      <a href="{{ profile.google_scholar }}"><i class="fa-solid fa-graduation-cap fa-lg"></i></a>
+      <a href="{{ profile.google_scholar }}"><i class="ai ai-google-scholar-square ai-lg" style="vertical-align: -.125em;"></i></a>
     </div>
   </div>
 {% endif %}

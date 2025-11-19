@@ -408,14 +408,21 @@
     {% endif %}
 
     {% if entry.video and site.enable_video_embedding %}
+      {%- assign video_list = entry.video | split: ',' -%}
       <!-- Hidden video block -->
       <div class="abstract hidden">
-        {% if entry.video contains '://' %}
-          {% assign video_url = entry.video %}
-        {% else %}
-          {% assign video_url = entry.video | prepend: site.external_url %}
-        {% endif %}
-        <div style="text-align: center;">{% include video.liquid path=video_url class="img-fluid rounded z-depth-1" controls=true %}</div>
+        <div class="row justify-content-around">
+          {% for raw_video_url in video_list %}
+            {% if raw_video_url contains '://' %}
+              {% assign video_url = raw_video_url %}
+            {% else %}
+              {% assign video_url = raw_video_url | prepend: site.external_url %}
+            {% endif %}
+            <div class="col-lg" style="text-align: center;">
+              {% include video.liquid path=video_url class="img-fluid rounded z-depth-1" controls=true %}
+            </div>
+          {% endfor %}
+        </div>
       </div>
     {% endif %}
   </div>

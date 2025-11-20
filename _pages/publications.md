@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: Publications by AIRobers.
+description: Publications from the AIRobers.
 nav: true
 nav_order: 2
 ---

@@ -2,7 +2,7 @@
 layout: page
 permalink: /repositories/
 title: Repositories
-description: Github repositories for our research.
+description: Open-source code from our research.
 nav: true
 nav_order: 4
 ---

@@ -1,0 +1,81 @@
+---
+layout: default
+---
+<div class="mt-5 mb-4">
+  <div class="card border-0 shadow-sm z-depth-1">
+    <div class="card-body">
+      <!-- Title + contact -->
+      <h1 class="h2 mb-3">Join the AIRob Lab</h1>
+      <ul class="list-unstyled mb-0">
+        <li class="mb-1">
+          <i class="fa-solid fa-map-marker-alt fa-fw"></i>
+          <a href="https://roomfinder.sfu.ca/apps/sfuroomfinder_web/?q=TASC18005"> TASC1 8005 </a>, Simon Fraser University
+        </li>
+        <li class="mb-1">
+          <i class="fa-solid fa-location fa-fw"></i>
+          <a href="https://goo.gl/maps/GFi7GNW4ZgTkbuBD7">8888 University Drive, Burnaby, BC, Canada V5A 1S6</a>
+        </li>
+        <li class="mb-1">
+          <i class="fa-solid fa-envelope fa-fw"></i>
+          <a href="mailto:hangma at sfu dot ca">hangma at sfu dot ca</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="row align-items-start mt-4">
+  <!-- Text -->
+  <div class="col-md-7">
+    <h2 class="h4 mb-3">Opportunities</h2>
+    <p>
+      The SFU AIRob Lab is always looking for self-motivated students at all levels. If you are interested in working with us on AI, robotics, and
+      multi-agent/robot systems, please mention lab director
+      <strong>Hang Ma</strong> in your application to the SFU CS graduate program.
+    </p>
+    <p>
+      Applicants should also refer to the
+      <a href="http://www.sfu.ca/computing/prospective-students/graduate-students.html" target="_blank"> SFU CS graduate program page </a>
+      for more information on the
+      <a href="http://www.sfu.ca/computing/prospective-students/graduate-students/admissions/requirements.html" target="_blank">
+        admission requirements
+      </a>
+      and
+      <a href="http://www.sfu.ca/computing/prospective-students/graduate-students/admissions/online-application.html" target="_blank">
+        application deadlines </a
+      >. Eligible students with only a bachelor’s degree are encouraged to apply directly to the PhD program.
+    </p>
+
+    <h2 class="h4 mt-4 mb-3">Location</h2>
+    <p>
+      The
+      <a href="https://www.sfu.ca/campuses/maps-and-directions/burnaby-map.html" target="_blank"> SFU Burnaby campus </a>
+      is located on Burnaby Mountain, about 12 miles from downtown Vancouver, offering easy access to a vibrant metropolitan area while being
+      surrounded by nature.
+    </p>
+  </div>
+
+  <!-- Vancouver photo -->
+  <div class="col-md-5 mt-4 mt-md-0">
+    {%
+      include figure.liquid
+      loading="eager"
+      path='assets/img/vancouver.jpg'
+      class='img-fluid rounded z-depth-1'
+      sizes='(min-width: 768px) 35vw, 90vw'
+      alt='Vancouver skyline (photo by TourismVancouver)'
+      cache_bust=true
+    %}
+    <p class="text-muted small mt-0 mb-5">Vancouver skyline (photo by TourismVancouver).</p>
+    {%
+      include figure.liquid
+      loading="eager"
+      path='assets/img/campus.jpg'
+      class='img-fluid rounded z-depth-1'
+      sizes='(min-width: 768px) 35vw, 90vw'
+      alt='SFU Burnaby campus (photo by SFU.ca)'
+      cache_bust=true
+    %}
+    <p class="text-muted small mt-0 mb-0">SFU Burnaby campus (photo by SFU.ca).</p>
+  </div>
+</div>

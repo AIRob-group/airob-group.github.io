@@ -2,7 +2,7 @@
 layout: page
 permalink: /people/
 title: People
-description: Meet AIRobers!
+description: Meet the AIRobers!
 nav: true
 nav_order: 1
 

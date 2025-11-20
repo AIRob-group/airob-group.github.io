@@ -11,14 +11,14 @@ ninja.data = [{
     },
   },{id: "nav-people",
           title: "People",
-          description: "Meet AIRobers!",
+          description: "Meet the AIRobers!",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
           },
         },{id: "nav-publications",
           title: "Publications",
-          description: "Publications by AIRobers.",
+          description: "Publications from the AIRobers.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/publications/";
@@ -32,10 +32,17 @@ ninja.data = [{
           },
         },{id: "nav-repositories",
           title: "Repositories",
-          description: "Github repositories for our research.",
+          description: "Open-source code from our research.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/repositories/";
+          },
+        },{id: "nav-join-us",
+          title: "Join Us",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/join_us/";
           },
         },{id: "books-the-godfather",
           title: 'The Godfather',

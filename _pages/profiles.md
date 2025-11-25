@@ -60,7 +60,7 @@ PI:
 {% assign phd_profiles = site.data.profiles | where: "type", "PHD" %}
 {% if phd_profiles.size > 0 %}
 
-<h2 class="text-muted text-left">Ph.D. Students</h2>
+<h2 class="category text-muted text-left">Ph.D. Students</h2>
 <hr>
 <div class="row row-cols-1 row-cols-md-4">
 {% for profile in phd_profiles %}
@@ -75,7 +75,7 @@ PI:
 {% assign masters_profiles = site.data.profiles | where: "type", "MSC" %}
 {% if masters_profiles.size > 0 %}
 
-<h2 class="text-muted text-left">M.Sc. Students</h2>
+<h2 class="category text-muted text-left">M.Sc. Students</h2>
 <hr>
 <div class="row row-cols-1 row-cols-md-4">
 {% for profile in masters_profiles %}

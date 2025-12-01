@@ -2,7 +2,11 @@
   firstname: Ryan
   type: PHD
   email: maa154 at sfu dot ca
-  intro:
+  image: RyanAssari.jpg
+  intro: Ryan received a B.Sc. in Physics and a B.Sc. in Computer Engineering from Amirkabir University of Technology in 2019 and 2020, respectively. He completed an M.Sc. in Computing Science at Simon Fraser University in 2024 under the supervision of Prof. Qianping Gu. His research interests include graph algorithms, multi-agent systems, and reinforcement learning. More information can be found on his <a href="https://ryan-assari.github.io/" target="_blank">homepage</a>.
+  webpage: https://ryan-assari.github.io/
+  github: https://github.com/ryan-assari
+  linkedin: https://www.linkedin.com/in/ryan-assari/
 
 - lastname: Mao
   firstname: Zining

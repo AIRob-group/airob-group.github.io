@@ -11,7 +11,7 @@ PI:
   firstname: Hang
   image: HangMa.jpg
   webpage: https://www2.cs.sfu.ca/~hangma/
-  google_scholar: https://scholar.google.com/user=KJbsVl8AAAAJ
+  google_scholar: https://scholar.google.com/citations?user=KJbsVl8AAAAJ
 ---
 
 <div class="projects">

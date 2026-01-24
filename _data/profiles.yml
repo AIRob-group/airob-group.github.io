@@ -13,7 +13,7 @@
   type: PHD
   email: zander_mao at sfu dot ca
   image: ZiningMao.jpg
-  intro: Zining received an M.Sc. in Computing Science from our lab at Simon Fraser University in 2025 and a B.Sc. in Computer Science from New York University Shanghai in 2021. He is interested in reinforcement learning and multi-agent systems.
+  intro: Zining received a B.Sc. in Computer Science from New York University Shanghai in 2021 and an M.Sc. in Computing Science from our lab at Simon Fraser University in 2025. He is interested in reinforcement learning and multi-agent systems.
 
 - lastname: Sun
   firstname: Dingyi
@@ -43,21 +43,15 @@
   firstname: Lufan
   type: PHD
   email: lufan_yang at sfu dot ca
-  intro:
+  intro: Lufan received a B.Eng. in Flight Vehicle Design and Engineering from Dalian University of Technology in 2020 and an M.Eng. in Aeronautical and Astronautical Science and Technology from Zhejiang University in 2023.
+  google_scholar: https://scholar.google.com/citations?user=LpByMzgAAAAJ
 
 - lastname: Yang
   firstname: Yifan
   type: PHD
   email: yifan_yang_6 at sfu dot ca
   intro: Yifan received a B.Eng. and an M.Eng., both in Computer Science and Technology from Harbin Institute of Technology, in 2020 and 2024, respectively.
-
-- lastname: Samuel
-  firstname: Ervin
-  type: MSC
-  email: esa95 at sfu dot ca
-  image: ErvinSamuel.jpg
-  intro: Ervin received a B.Sc. in Computer Science from National Tsing Hua University in 2022. He is interested in artificial intelligence, particularly reinforcement learning and its application to path planning.
-  linkedin: https://www.linkedin.com/in/ervinsamuel/
+  google_scholar: https://scholar.google.com/citations?user=HCVkMcgAAAAJ
 
 - lastname: Chamani
   firstname: Danoosh
@@ -81,10 +75,19 @@
 - lastname: Lin
   firstname: Qiushi
   type: F_MSC
+  image: QiushiLin.jpg
   intro: Qiushi received a B.Eng. in Computer Science and Technology from Southern University of Science and Technology in 2020 and an M.Sc. in Computing Science from Simon Fraser University in 2023. He is interested in machine learning, reinforcement learning, and multi-agent system.
   github: https://github.com/Qiushi-Lin/
   positions:
     - Ph.D. Student at Simon Fraser University
+
+- lastname: Samuel
+  firstname: Ervin
+  type: F_MSC
+  email: esa95 at sfu dot ca
+  image: ErvinSamuel.jpg
+  intro: Ervin received a B.Sc. in Computer Science from National Tsing Hua University in 2022 and an M.Sc. in Computing Science from Simon Fraser University in 2025. He is interested in artificial intelligence, particularly reinforcement learning and its application to path planning.
+  linkedin: https://www.linkedin.com/in/ervinsamuel/
 
 - lastname: Xu
   firstname: Qinghong

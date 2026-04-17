@@ -209,6 +209,11 @@ ninja.data = [{
           description: "",
           section: "News",handler: () => {
               window.location.href = "/news/2026-03-01/";
+            },},{id: "news-2026-04-17",
+          title: '2026 04 17',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/2026-04-17/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",

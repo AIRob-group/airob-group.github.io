@@ -301,7 +301,7 @@ filtered_bibtex_keywords: [
     bibtex_show,
     blog,
     code,
-    demolink
+    demolink,
     eqcontr,
     flag,
     google_scholar_id,
@@ -309,6 +309,7 @@ filtered_bibtex_keywords: [
     html,
     inspirehep_id,
     month,
+    keywords,
     pdf,
     poster,
     preview,
@@ -317,7 +318,7 @@ filtered_bibtex_keywords: [
     runnerup,
     selected,
     slides,
-    slideslive
+    slideslive,
     specialtrack,
     supp,
     video,

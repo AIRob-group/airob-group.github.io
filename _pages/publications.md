@@ -15,6 +15,9 @@ nav_order: 2
 
 <div class="publications">
 
-{% bibliography %}
+<h2 class="bibliography">Preprints</h2>
+{% bibliography -q @*[keywords~=preprint] --group_by none %}
+
+{% bibliography -q @*[keywords!~preprint] --group_by year --group_order descending %}
 
 </div>

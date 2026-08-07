@@ -60,6 +60,7 @@
   intro: Danoosh received a B.Sc. in Computer Software Engineering from the University of Tehran in 2019 and an M.Sc. in Computing Science from Simon Fraser University in 2022. He is interested in reinforcement learning, machine learning, and robotics.
   linkedin: https://www.linkedin.com/in/danoosh-chamani-64903b207
   positions:
+    - Data Scientist at Scotiabank
     - Data Scientist at Health Canada
 
 - lastname: Li
@@ -67,10 +68,11 @@
   type: F_MSC
   image: BaiyuLi.jpg
   intro: Baiyu received a B.Eng. in Computer Science from Northeastern University (Shenyang, China) in 2020 and an M.Sc. in Computing Science from Simon Fraser University in 2023. He is interested in path planning, multi-agent system, and parallel computing.
-  linkedin: https://www.linkedin.com/in/%E6%9F%8F%E9%9B%A8-%E6%9D%8E-07494318b
+  linkedin: https://www.linkedin.com/in/baiyu-li-07494318b/
   positions:
-    - Software Engineer at TikTok
-    - Software Developer at Fortinet
+    - Embedded Software Developer at Fortinet
+    - Backend Software Engineer at TikTok
+    - Embedded Software Developer at Fortinet
 
 - lastname: Lin
   firstname: Qiushi
@@ -125,6 +127,9 @@
   firstname: Yudong
   type: F_VISITOR
   image: YudongLuo.jpg
-  intro: Yudong is a Ph.D. student at the University of Waterloo. He received a B.Eng. in Computer Science from Shanghai Jiao Tong University in 2018 and an M.Sc. in Computing Science from Simon Fraser University in 2020. He is interested in reinforcement learning, machine learning, and multi-agent system. Yudong visited our lab for 12 months in 2020/2021. More information can be found on his <a href="http://miyunluo.com" target="_blank">homepage</a>.
+  intro: Yudong received a B.Eng. in Computer Science from Shanghai Jiao Tong University in 2018 and an M.Sc. in Computing Science from Simon Fraser University in 2020. He is interested in reinforcement learning, machine learning, and multi-agent system. Yudong visited our lab for 12 months in 2020/2021. More information can be found on his <a href="http://miyunluo.com" target="_blank">homepage</a>.
   webpage: http://miyunluo.com
   google_scholar: https://scholar.google.com/citations?user=1xPjAucAAAAJ
+  positions:
+    - Postdoctoral Researcher at HEC Montréal
+    - Ph.D. Student at University of Waterloo

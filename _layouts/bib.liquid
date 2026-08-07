@@ -95,7 +95,7 @@
           {% endfor %}
         {%- endif -%}
         {%- for profile in site.data.profiles -%}
-          {% if profile.lastname | downcase | remove_accents == clean_last_name %}
+          {% if profile.lastname == author.last %}
             {% if profile.firstname == author.first %}
               {%- assign coauthor_url = relative_url | append: '/people#' | append: profile.firstname | append: '_' | append: profile.lastname -%}
             {% endif %}

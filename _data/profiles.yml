@@ -14,13 +14,14 @@
   email: zander_mao at sfu dot ca
   image: ZiningMao.jpg
   intro: Zining received a B.Sc. in Computer Science from New York University Shanghai in 2021 and an M.Sc. in Computing Science from our lab at Simon Fraser University in 2025. He is interested in reinforcement learning and multi-agent systems.
+  github: https://github.com/Zander-M
 
-- lastname: Sun
-  firstname: Dingyi
-  type: PHD
-  email: dingyi_sun at sfu dot ca
-  image: DingyiSun.jpg
-  intro: Dingyi received a B.Eng. in Electrical Engineering and Automation from Huazhong University of Science and Technology in 2018 and an M.S. in Electrical and Computer Engineering (Robotics Track) from the University of Michigan in 2020. He is interested in path planning, machine learning, and robotic perception.
+# - lastname: Sun
+#   firstname: Dingyi
+#   type: PHD
+#   email: dingyi_sun at sfu dot ca
+#   image: DingyiSun.jpg
+#   intro: Dingyi received a B.Eng. in Electrical Engineering and Automation from Huazhong University of Science and Technology in 2018 and an M.S. in Electrical and Computer Engineering (Robotics Track) from the University of Michigan in 2020. He is interested in path planning, machine learning, and robotic perception.
 
 - lastname: Tan
   firstname: Jiaqi
@@ -28,6 +29,7 @@
   email: jiaqi_tan at sfu dot ca
   intro: Jiaqi received a B.Eng. in Computer Science and Technology from Shenzhen University in 2019 and an M.Sc. in Computing Science from Simon Fraser University in 2022.
   github: https://github.com/ChristinaTan0704
+  google_scholar: https://scholar.google.com/citations?user=nRf-IyAAAAAJ
 
 - lastname: Tang
   firstname: Jingtao
@@ -38,6 +40,7 @@
   webpage: https://reso1.github.io/blog/
   github: https://github.com/reso1
   google_scholar: https://scholar.google.com/citations?user=58xSbH8AAAAJ
+  linkedin: https://www.linkedin.com/in/jiaqi-christina-tan-800697158/
 
 - lastname: Yang
   firstname: Lufan
@@ -45,6 +48,7 @@
   email: lufan_yang at sfu dot ca
   intro: Lufan received a B.Eng. in Flight Vehicle Design and Engineering from Dalian University of Technology in 2020 and an M.Eng. in Aeronautical and Astronautical Science and Technology from Zhejiang University in 2023.
   google_scholar: https://scholar.google.com/citations?user=LpByMzgAAAAJ
+  linkedin: https://www.linkedin.com/in/lufan-yang-946a83348/
 
 - lastname: Yang
   firstname: Yifan

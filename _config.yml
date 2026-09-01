@@ -311,6 +311,7 @@ filtered_bibtex_keywords: [
     github,
     html,
     inspirehep_id,
+    media,
     month,
     month_numeric,
     keywords,

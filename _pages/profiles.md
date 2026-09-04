@@ -40,7 +40,7 @@ PI:
       <h2>Hang Ma</h2>
       <p class="mb-1">
         Director, AIRob Lab<br>
-        Assistant Professor, School of Computing Science
+        Associate Professor, School of Computing Science
       </p>
       <p class="mb-1">
       <i class="fa-solid fa-map-marker-alt fa-fw"></i> <a href="https://roomfinder.sfu.ca/apps/sfuroomfinder_web/?q=TASC18223">TASC1 8223</a>, Simon Fraser University<br>
@@ -48,7 +48,7 @@ PI:
       <br>
       </p>
       <p>
-        Hang Ma is an Assistant Professor in the School of Computing Science at Simon Fraser University,
+        Hang Ma is an Associate Professor in the School of Computing Science at Simon Fraser University,
         where he leads the Autonomous Intelligent Robotics Lab (AIRob Lab). His research focuses on
         automated planning and multi-robot coordination, spanning both AI and robotics communities.
       </p>

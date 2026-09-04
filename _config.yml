@@ -2,10 +2,10 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: blank # the website title (if blank, full name will be used instead)
-first_name: AIRob Lab
+title: AIRob Lab # the website title (if blank, full name will be used instead)
+first_name: Hang # the first name of the website owner
 middle_name:
-last_name:
+last_name: Ma # the last name of the website owner
 contact_note: >
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: >

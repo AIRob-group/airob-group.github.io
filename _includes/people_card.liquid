@@ -27,8 +27,11 @@
             (Undergrad)
           {% when 'F_VISITOR' -%}
             (Visitor)
-        {% endcase -%}
+        {% endcase -%}   
       </span>
+      {% if profile.note %}
+        <small class="text-muted d-block" style="font-size: 0.6rem; line-height: 0.6rem;">{{ profile.note }}</small>
+      {% endif %}
       <div class="row ml-1 mr-1 p-0 justify-content-center">
         {% include profile_social.liquid %}
       </div>

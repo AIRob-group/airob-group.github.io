@@ -24,6 +24,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Our lab conducts cutting-edge research in multi-agent/robot systems, multi-robot coordination, automated planning, AI, robotics, and machine learning. Our mission is to advance the field of robotics through innovative research and practical applications that enhance the capabilities of autonomous systems.
+The AIRob Lab led by [Hang Ma](https://www2.cs.sfu.ca/~hangma/) conducts cutting-edge research in multi-agent/robot systems, multi-robot coordination, automated planning, AI, robotics, and machine learning. Our mission is to advance the field of robotics through innovative research and practical applications that enhance the capabilities of autonomous systems.
 
 We are committed to fostering a collaborative and inclusive research environment that encourages creativity, critical thinking, and interdisciplinary collaboration. Join us as we explore the frontiers of robotics and AI to create intelligent systems that can operate autonomously in complex and dynamic environments.
+
+We are affiliated with the SFU [Robotics Group](https://robotics.sfu.ca/), [Machine Learning Group](https://ml.cs.sfu.ca/), and the [VINCI Institute](https://vinci.sfu.ca/).

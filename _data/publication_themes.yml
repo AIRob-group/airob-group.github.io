@@ -1,0 +1,26 @@
+# Titles count three times as much as abstracts. Phrases match whole words.
+# Add `themes = {id, another-id},` to a BibTeX entry to override classification.
+- id: multi-agent-path-finding
+  label: Multi-Agent Path Finding
+  color: '#c6283d'
+  phrases: [multi agent path finding, multi-agent pathfinding, mapf, conflict based search, symmetry breaking, symmetry reasoning, multi robot motion planning, priority based search, pbs, prioritized planning]
+- id: multi-robot-coordination
+  label: Task Allocation & Coordination
+  color: '#b66b45'
+  phrases: [task allocation, task assignment, target assignment, pickup and delivery, mapd, warehouse, warehouses, shelf rearrangement, formation, sortation, scheduling, multi robot coordination, multi agent systems, tsp, traveling salesman, combinatorial optimization]
+- id: motion-planning
+  label: Motion Planning & Optimization
+  color: '#b65f7c'
+  phrases: [motion planning, path planning, trajectory planning, trajectory optimization, convex sets, route optimization, kinematic constraints, mixed integer, combinatorial optimization]
+- id: coverage-inspection
+  label: Coverage & Inspection
+  color: '#6e72a8'
+  phrases: [coverage, mcpp, coverage path planning, inspection, inspections, inspecting, surveillance]
+- id: learning-and-decision-making
+  label: Learning & Decision-Making
+  color: '#895b99'
+  phrases: [reinforcement learning, rl, machine learning, training, q learning, actor critic, pomdp, pomdps, markov decision, reward, policy learning, foundation models, mean field, neural network, graph convolution]
+- id: other
+  label: Other Research
+  color: '#8b8c95'
+  phrases: []

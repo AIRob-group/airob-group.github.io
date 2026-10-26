@@ -6,14 +6,10 @@ description: Publications from the AIRobers.
 nav: true
 nav_order: 2
 ---
+<i class="fa-solid fa-graduation-cap me-2"></i>
+  View the full list of publications on <a href="https://scholar.google.com/citations?user=KJbsVl8AAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
 
-<div class="alert alert-light border rounded-3 mb-4" role="alert">
-  <i class="fa-solid fa-graduation-cap me-2"></i>
-  View the full list of publications on
-  <a href="https://scholar.google.com/citations?user=KJbsVl8AAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
-</div>
-
-<!-- _pages/publications.md -->
+{% include publication_graph.liquid %}
 
 <!-- Bibsearch Feature -->
 

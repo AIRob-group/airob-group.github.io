@@ -345,3 +345,24 @@ In this folder you need to store your file in the same format as you would in `_
   - `2025-08-27-file2.md` will be posted exactly on 27-August-2025
   - `File3.md` will not be posted at all
   - `2026-02-31-file4.md` is supposed to be posted on 31-February-2026, but there is no 31st in February hence this file will never be posted either
+
+
+## Publication theme network
+
+The Publications page builds an interactive network automatically from `_bibliography/publications.bib` whenever Jekyll builds the site. No API keys or additional dependencies are required.
+
+Edit `_data/publication_themes.yml` to change theme names, colors, and matching phrases. Matching uses whole phrases in titles (weight 3) and abstracts (weight 1). A paper can receive any number of supported automatic themes (there is no fixed cap). Secondary themes need a score of at least 2 and at least 20% of the best score; unmatched papers use Other Research. The primary theme determines the node color. Abstracts improve classification, but title-only entries are supported.
+
+To override a paper's automatic themes, add one or more theme IDs to its BibTeX entry. The first ID controls its color:
+
+```bibtex
+themes = {multi-agent-path-finding, multi-robot-coordination},
+```
+
+Unknown theme IDs fail the build with a message identifying the paper. The `themes` field is hidden from the displayed BibTeX export; the existing publication-type `keywords` field is unchanged.
+
+Connections use TF-IDF cosine similarity of titles and abstracts, with a minimum score of 0.12 and at most seven links per paper. These represent textual similarity, not citations or coauthorship. Theme matching is a transparent phrase heuristic, not an AI assessment, so review assignments for ambiguous papers. Layout positions are computed deterministically at build time, using overlapping theme anchors and similarity springs. Multi-theme papers sit between their theme anchors. Hover or focus highlights the selected paper, its curved connections, and its neighbors; segmented rings show additional theme memberships. The generated data is written to `assets/data/publication-graph.json` in the built site; do not edit it directly.
+
+Theme buttons filter the network only. Hover or keyboard-focus a node for its title, and select it to jump to the publication. The bibliography stays available if JavaScript is disabled or the graph cannot load.
+
+Run the checks with `bundle exec ruby _scripts/test-publication-graph.rb`, and preview normally with `bundle exec jekyll serve`.

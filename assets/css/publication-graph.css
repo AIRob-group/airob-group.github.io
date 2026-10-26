@@ -1,0 +1,48 @@
+.publication-network {
+  --network-ink: #ad354b;
+  margin: 1.5rem 0 2.5rem;
+  padding: 1.5rem 1.5rem 1rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  background: var(--global-card-bg-color);
+  color: var(--global-text-color);
+}
+.publication-network-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.publication-network-eyebrow { text-transform: uppercase; letter-spacing: .16em; font-size: .68rem; color: var(--global-theme-color); }
+.publication-network h2 { margin: .3rem 0 .7rem; font-size: 1.65rem; }
+.publication-network p { font-size: .82rem; line-height: 1.6; }
+.publication-network button { color: inherit; background: transparent; border: 1px solid var(--global-divider-color); border-radius: 20px; padding: .35rem .7rem; font-size: .72rem; cursor: pointer; transition: background .18s, border-color .18s; }
+.publication-network button:hover { border-color: var(--network-ink); }
+.publication-network button[aria-pressed="true"] { background: var(--network-ink); border-color: var(--network-ink); color: #fff; }
+.publication-network button:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; }
+.publication-network-legend { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: 1rem; }
+.publication-network-swatch { display: inline-block; width: .55rem; height: .55rem; margin-right: .4rem; border-radius: 50%; }
+.publication-network-canvas { position: relative; height: 360px; overflow: hidden; margin-top: .5rem; background: radial-gradient(ellipse at center, rgba(173, 53, 75, .035), transparent 70%); }
+.publication-network-canvas svg { display: block; width: 100%; height: 100%; }
+.publication-network[data-expanded="true"] .publication-network-canvas { height: 550px; }
+.publication-network-edge { fill: none; stroke: var(--network-ink); opacity: .24; pointer-events: none; transition: opacity .18s, stroke-width .18s; }
+.publication-network-edge.is-active { opacity: .92; stroke-width: 2.4; }
+.publication-network-edge.is-dimmed { opacity: .035; }
+.publication-network-node { transition: opacity .18s; outline: none; }
+.publication-network-node.is-dimmed { opacity: .16; }
+.publication-network-dot { stroke: var(--global-card-bg-color); stroke-width: 1.6; }
+.publication-network-hit { fill: transparent; stroke: none; pointer-events: all; }
+.publication-network-halo { fill: var(--node-color); opacity: 0; pointer-events: none; transition: opacity .18s; }
+.publication-network-node.is-active .publication-network-halo { opacity: .22; }
+.publication-network-node.is-neighbor .publication-network-dot { stroke: var(--network-ink); stroke-width: 1.8; }
+.publication-network-theme-ring { opacity: 0; pointer-events: none; transition: opacity .18s; }
+.publication-network-node.is-active .publication-network-theme-ring { opacity: 1; }
+.publication-network-tooltip { position: absolute; z-index: 2; width: 285px; max-width: calc(100% - 16px); padding: .85rem 1rem; border: 1px solid var(--global-divider-color); border-top: 2px solid var(--network-ink); border-radius: 8px; background: var(--global-bg-color); color: var(--global-text-color); box-shadow: 0 8px 28px rgba(60, 10, 20, .12); pointer-events: none; font-size: .75rem; line-height: 1.45; }
+.publication-network-tooltip strong { display: block; margin: .3rem 0; font-size: .84rem; }
+.publication-network-tooltip span { display: block; color: var(--global-text-color-light); }
+.publication-network-detail { min-height: 3.2em; margin: .5rem 0 0; color: var(--global-text-color-light); border-top: 1px solid var(--global-divider-color); padding-top: .7rem; }
+.publication-network [hidden] { display: none; }
+@media (max-width: 576px) {
+  .publication-network { padding: 1rem; }
+  .publication-network-heading { align-items: flex-start; }
+  .publication-network-canvas { height: 280px; }
+  .publication-network[data-expanded="true"] .publication-network-canvas { height: 420px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .publication-network *, .publication-network *::before { transition: none !important; }
+}

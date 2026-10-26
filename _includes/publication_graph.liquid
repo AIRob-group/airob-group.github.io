@@ -1,0 +1,18 @@
+<section class="publication-network" data-expanded="true" aria-labelledby="publication-network-title" data-source="{{ '/assets/data/publication-graph.json' | relative_url }}">
+  <div class="publication-network-heading">
+    <div>
+      <span class="publication-network-eyebrow">Explore our research</span>
+      {% comment %} <h2 id="publication-network-title">Connected by ideas</h2> {% endcomment %}
+    </div>
+    <button type="button" class="publication-network-expand" aria-expanded="true" aria-controls="publication-network-canvas">Collapse graph</button>
+  </div>
+  {% comment %} <p>Each dot is a paper. Colors indicate research themes; connections indicate title and abstract similarity, not citations. Hover to trace connections. Rings indicate additional themes. Select a paper to find it below.</p> {% endcomment %}
+  <div class="publication-network-legend" role="group" aria-label="Filter by research theme"></div>
+  <div id="publication-network-canvas" class="publication-network-canvas">
+    <svg viewBox="0 0 1000 620" role="group" aria-label="Publication network"></svg>
+  </div>
+  <p class="publication-network-detail" aria-live="polite">Loading publication network…</p>
+  <noscript>The complete publication list is available below. Enable JavaScript to explore the network.</noscript>
+</section>
+<link rel="stylesheet" href="{{ '/assets/css/publication-graph.css' | relative_url }}">
+<script src="{{ '/assets/js/publication-graph.js' | relative_url }}" defer></script>

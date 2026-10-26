@@ -15,6 +15,8 @@ entries = BibTeX.parse(<<~BIB).entries.values
   @article{allocation, title = {Task Assignment and Coordination}, year = {2025}}
   @article{mapping, title = {Visual Mapping}, abstract = {Sensor fusion for localization}, year = {2025}}
   @article{manual, title = {Visual Mapping}, themes = {motion-planning, coverage-inspection}, year = {2025}}
+  @article{theory, title = {A Competitive Analysis of Online Multi-Agent Path Finding}, year = {2025}}
+  @article{hardness, title = {Multi-Agent Path Finding is NP-Hard}, year = {2025}}
   @article{unknown, title = {Annual Activity Report}, year = {2023}}
   @article{cross, title = {Reinforcement Learning for Multi-Agent Path Finding and Motion Planning}, year = {2025}}
   @article{broad, title = {Coverage and Motion Planning with Reinforcement Learning for Multi-Agent Path Finding and Task Assignment}, year = {2025}}
@@ -28,6 +30,9 @@ check(by_id['coverage']['themes'] == ['coverage-inspection'], 'Coverage should b
 check(by_id['inspection']['themes'] == ['coverage-inspection'], 'Inspection should be separate from task allocation')
 check(by_id['allocation']['themes'] == ['multi-robot-coordination'], 'Task allocation should remain separate from coverage')
 check(by_id['manual']['themes'] == %w[motion-planning coverage-inspection], 'Manual override was not preserved')
+check(by_id['theory']['themes'].include?('complexity-theory'), 'Competitive analysis must match Complexity & Theory')
+check(by_id['hardness']['themes'].include?('complexity-theory'), 'Hyphenated NP-hard titles must match Complexity & Theory')
+check(!by_id['mapf']['themes'].include?('complexity-theory'), 'Ordinary MAPF papers should not automatically count as theory')
 check(by_id['unknown']['theme'] == 'other', 'Unmatched papers must not receive an arbitrary theme')
 check(by_id['cross']['themes'].size == 3, 'Clearly interdisciplinary papers should receive three themes')
 check(by_id['broad']['themes'].size == 5, 'All well-supported themes should be retained without a fixed cap')

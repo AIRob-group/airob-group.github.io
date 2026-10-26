@@ -9,6 +9,32 @@
     youtubetalk = {award talk,https://www.youtube.com/embed/wwY_7PyL2IY},    
     pdf = {pub/dissertation.pdf},
     google_scholar_id={v1_lew4L6wgC},
+	abstract = {In many real-world applications of multi-agent systems, teams of agents must assign targets
+among themselves and plan paths to the targets. The agents must avoid collisions with each
+other in a congested environment, yet reach their targets as soon as possible. The resulting
+coordination problems, which model the target-assignment and path-planning operations of the
+agents, are fundamental for these multi-agent systems but, at the same time, computationally
+challenging, as there are often many agents and their operating time is long. This dissertation
+studies two types of multi-agent coordination problems: (1) One-shot coordination problems that
+assign given targets to and plan paths for a given set of agents to reach their targets on a given
+graph that models the environment and (2) long-term coordination problems that repeatedly
+assign incoming tasks to a given set of agents and plan paths for the agents to the targets of their
+assigned tasks.
+This dissertation builds upon the recent successes in tackling a one-shot path-planning problem, called Multi-Agent Path Finding (MAPF), in the artificial intelligence (AI) community as
+well as theoretical and algorithmic results for other target-assignment and path-planning problems from the theoretical computer science, operations research, AI, and robotics communities. It addresses three central questions when generalizing these results to solving the targetassignment and the path-planning problems jointly: Question 1: How hard is it to jointly assign
+targets to and plan paths for teams of agents? Question 2: How and how well can one jointly
+assign targets to and plan paths for teams of agents? Question 3: How do teams of agents execute
+the computed solutions?
+We tackle these three central questions by formalizing novel variants of MAPF that model
+different target-assignment and path-planning problems, studying their theoretical properties,
+and developing algorithms for them and thus make the following four contributions. First, we
+introduce a unified NP-hardness proof structure that can be used to derive complexity results for
+different target-assignment and path-planning problems. Second, we formalize and study Combined Target Assignment and Path Finding (TAPF), which models the one-shot combined targetassignment and path-planning problem and present complete and optimal algorithms for solving
+it. Third, we formalize and study Multi-Agent Pickup and Delivery (MAPD), which models
+the long-term combined target-assignment and path-planning problem and present MAPD algorithms that provide a guarantee on their long-term robustness, namely, allow agents to finish all
+tasks without deadlocks. Fourth, we demonstrate how our MAPD algorithms can take some of
+the kinodynamic constraints of real-world agents into account to compute plan-execution schedules, which showcases the benefits of our algorithms for real-world applications of multi-agent
+systems.}
 }
 
 @article{MaARXIV26,
@@ -1154,7 +1180,7 @@ and the centralized MAPD algorithm.}
     video = {videos/overview1.mp4},
 	google_scholar_id={a3BOlSfXSfwC},
 	abstract = 
-	{NA}
+	{The authors present an overview of a hierarchical framework for coordinating task- and motion-level operations in multirobot systems. Their framework is based on the idea of using simple temporal networks to simultaneously reason about precedence/causal constraints required for task-level coordination and simple temporal constraints required to take some kinematic constraints of robots into account. In the plan-generation phase, the framework provides a computationally scalable method for generating plans that achieve high-level tasks for groups of robots and take some of their kinematic constraints into account. In the plan-execution phase, the framework provides a method for absorbing an imperfect plan execution to avoid time-consuming re-planning in many cases. The authors use the multirobot path-planning problem as a case study to present the key ideas behind their framework for the long-term autonomy of multirobot systems.}
 }
 
 @article{MaAIMATTERS17,

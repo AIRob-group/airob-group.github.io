@@ -3,7 +3,7 @@
 - id: multi-agent-path-finding
   label: Multi-Agent Path Finding
   color: '#c6283d'
-  phrases: [multi agent path finding, multi-agent pathfinding, mapf, conflict based search, symmetry breaking, symmetry reasoning, multi robot motion planning, priority based search, pbs, prioritized planning]
+  phrases: [multi agent path finding, multi-agent pathfinding, mapf, conflict based search, symmetry breaking, symmetry reasoning, multi robot path planning, priority based search, pbs, prioritized planning, collision free, conflict free]
 - id: multi-robot-coordination
   label: Task Allocation & Coordination
   color: '#b66b45'

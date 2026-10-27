@@ -13,10 +13,14 @@
     Object.entries(attributes).forEach(([key, value]) => node.setAttribute(key, value));
     return node;
   };
-  const tooltip = document.createElement('div');
+  const tooltip = document.createElement('a');
   tooltip.className = 'publication-network-tooltip';
   tooltip.hidden = true;
-  tooltip.setAttribute('aria-hidden', 'true');
+  tooltip.tabIndex = -1;
+  const tooltipTitle = document.createElement('strong');
+  const tooltipMeta = document.createElement('span');
+  const tooltipTags = document.createElement('span');
+  tooltip.append(tooltipMeta, tooltipTitle, tooltipTags);
   canvas.append(tooltip);
   expand.addEventListener('click', () => {
     const expanded = expand.getAttribute('aria-expanded') !== 'true';
@@ -49,8 +53,9 @@
       const clusterLabels = [];
       let hovered = null;
       let focused = null;
+      let pinned = null;
       let selectedTheme = 'all';
-      const summary = `${data.nodes.length} publications · ${data.links.length} connections. Hover or focus a paper to trace its connections.`;
+      const summary = `${data.nodes.length} publications · ${data.links.length} connections. Hover or focus a dot to trace connections. Click a dot to keep them visible, then click its card to scroll to the publication. Click elsewhere to release.`;
       let currentSummary = summary;
       const matches = node => selectedTheme === 'all' || node.themes.includes(selectedTheme);
       const edgeLayer = element('g', { 'aria-hidden': 'true' });
@@ -117,13 +122,14 @@
         edgeElements.push({ edge, source, target });
       });
       const highlight = () => {
-        const id = hovered || focused;
+        const id = pinned || hovered || focused;
         const selected = id && nodes.get(id);
         const related = selected && neighbors.get(id);
         nodeElements.forEach(({ anchor, node }) => {
           anchor.classList.toggle('is-dimmed', Boolean(selected && node.id !== id && !related.has(node.id)));
           anchor.classList.toggle('is-active', node.id === id);
           anchor.classList.toggle('is-neighbor', Boolean(selected && related.has(node.id)));
+          anchor.setAttribute('aria-pressed', String(node.id === pinned));
         });
         edgeElements.forEach(({ edge, source, target }) => {
           const connected = source.id === id || target.id === id;
@@ -136,21 +142,23 @@
           label.classList.toggle('is-dimmed', Boolean(selected && !selected.themes.includes(theme.id)));
         });
         tooltip.hidden = !selected;
+        tooltip.classList.toggle('is-pinned', Boolean(pinned));
+        tooltip.tabIndex = pinned ? 0 : -1;
         if (!selected) {
           detail.textContent = currentSummary;
           return;
         }
         const themeNames = selected.themes.map(themeId => themes.get(themeId).label).join(' · ');
+        tooltip.setAttribute('href', `#${encodeURIComponent(selected.id)}`);
         const count = [...related].filter(neighbor => matches(nodes.get(neighbor))).length;
-        detail.textContent = `${selected.title} (${selected.year}) — ${themeNames}. ${count} visible connections.`;
-        tooltip.replaceChildren();
-        const title = document.createElement('strong');
-        title.textContent = selected.title;
-        const meta = document.createElement('span');
-        meta.textContent = `${selected.year} · ${count} connections`;
-        const tags = document.createElement('span');
-        tags.textContent = themeNames;
-        tooltip.append(meta, title, tags);
+        // Let visitors identify other dots while the pinned connections stay put.
+        const inspected = nodes.get(hovered || focused || id);
+        const inspectedThemes = inspected.themes.map(themeId => themes.get(themeId).label).join(' · ');
+        const inspectedCount = [...neighbors.get(inspected.id)].filter(neighbor => matches(nodes.get(neighbor))).length;
+        detail.textContent = `${inspected.title} (${inspected.year}) — ${inspectedThemes}. ${inspectedCount} visible connections.`;
+        tooltipTitle.textContent = selected.title;
+        tooltipMeta.textContent = `${selected.year} · ${count} connections`;
+        tooltipTags.textContent = themeNames;
         const anchor = nodeElements.find(item => item.node.id === id).anchor;
         const box = anchor.getBoundingClientRect();
         const frame = canvas.getBoundingClientRect();
@@ -189,7 +197,7 @@
         const label = `${node.title} (${node.year}) — ${node.themes.map(id => themes.get(id).label).join('; ')}`;
         const radius = 5.8 + Math.sqrt(neighbors.get(node.id).size) * 1.1;
         const anchor = element('a', {
-          href: `#${encodeURIComponent(node.id)}`, class: 'publication-network-node', 'aria-label': label,
+          role: 'button', tabindex: '0', 'aria-pressed': 'false', class: 'publication-network-node', 'aria-label': label,
           style: `--node-color: ${theme.color}`
         });
         // A large transparent target makes small nodes easier to hover or tap.
@@ -213,30 +221,56 @@
         anchor.addEventListener('focus', () => { focused = node.id; highlight(); });
         anchor.addEventListener('blur', () => { focused = null; highlight(); });
         anchor.addEventListener('click', () => {
-          const destination = document.getElementById(node.id);
-          if (destination) {
-            destination.setAttribute('tabindex', '-1');
-            destination.focus({ preventScroll: true });
-          }
-          hovered = null;
-          focused = null;
+          pinned = node.id;
           highlight();
+        });
+        anchor.addEventListener('keydown', event => {
+          if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            anchor.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+          }
         });
         nodeLayer.append(anchor);
         nodeElements.push({ anchor, node });
       });
-      panel.addEventListener('keydown', event => {
-        if (event.key === 'Escape') { hovered = null; focused = null; highlight(); }
+      const release = () => {
+        pinned = null;
+        hovered = null;
+        focused = null;
+        highlight();
+      };
+      tooltip.addEventListener('click', event => {
+        const id = pinned || hovered || focused;
+        const entry = id && document.getElementById(id);
+        // Bibliography anchors are hidden; focus and scroll their visible entry.
+        const destination = entry && (entry.closest('li') || entry);
+        if (!destination) return;
+        event.preventDefault();
+        destination.setAttribute('tabindex', '-1');
+        destination.focus({ preventScroll: true });
+        history.pushState(null, '', `#${encodeURIComponent(id)}`);
+        destination.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth',
+          block: 'start'
+        });
+        release();
+      });
+      document.addEventListener('click', event => {
+        if (!event.target.closest('.publication-network-node')) release();
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') release();
       });
       const filter = id => {
         selectedTheme = id;
         clusterLabels.forEach(({ label, theme }) => { label.style.display = id === 'all' || theme.id === id ? '' : 'none'; });
         hovered = null;
         focused = null;
+        pinned = null;
         nodeElements.forEach(({ anchor, node }) => { anchor.style.display = matches(node) ? '' : 'none'; });
         edgeElements.forEach(({ edge, source, target }) => { edge.style.display = matches(source) && matches(target) ? '' : 'none'; });
         buttons.forEach(({ button, themeId }) => button.setAttribute('aria-pressed', String(id === themeId)));
-        currentSummary = id === 'all' ? summary : `${data.nodes.filter(matches).length} publications in ${themes.get(id).label}. Hover a paper to trace its connections.`;
+        currentSummary = id === 'all' ? summary : `${data.nodes.filter(matches).length} publications in ${themes.get(id).label}. Click a dot to keep connections visible, then click its card to scroll to the publication. Click elsewhere to release.`;
         highlight();
       };
       const sortedThemes = data.themes.map(theme => ({
@@ -262,7 +296,7 @@
         legend.append(button);
       });
       detail.textContent = summary;
-      window.addEventListener('resize', () => { if (hovered || focused) highlight(); });
+      window.addEventListener('resize', () => { if (pinned || hovered || focused) highlight(); });
     })
     .catch(error => {
       detail.textContent = 'The network is unavailable. Browse the complete publication list below.';

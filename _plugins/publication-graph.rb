@@ -75,7 +75,7 @@ module AIRob
       # Greedy degree cap prevents dense topics from turning into an unreadable mesh.
       degree = Array.new(nodes.size, 0)
       links = candidates.sort_by { |i, j, score| [-score, i, j] }.filter_map do |i, j, score|
-        next if degree[i] >= 7 || degree[j] >= 7
+        next if degree[i] >= 14 || degree[j] >= 14
         degree[i] += 1
         degree[j] += 1
         { 'source' => nodes[i]['id'], 'target' => nodes[j]['id'], 'weight' => score.round(4) }

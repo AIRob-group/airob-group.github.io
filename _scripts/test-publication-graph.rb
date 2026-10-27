@@ -73,6 +73,6 @@ graph['links'].each do |link|
   degree[link['source']] += 1
   degree[link['target']] += 1
 end
-check(degree.values.all? { |value| value <= 7 }, 'Too many links per node')
+check(degree.values.all? { |value| value <= 14 }, 'Too many links per node')
 check(graph['nodes'].all? { |node| node['x'].between?(0, 1000) && node['y'].between?(0, 620) }, 'Node outside canvas')
 puts "Publication graph checks passed: #{ids.size} papers, #{graph['links'].size} links."

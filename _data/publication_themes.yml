@@ -1,28 +1,39 @@
 # Titles count three times as much as abstracts. Phrases match whole words.
 # Add `themes = {id, another-id},` to a BibTeX entry to override classification.
+# Related robotics themes use warm hues: red/rose for planning, coral for
+# execution, orange/gold for coordination and coverage. Cross-cutting methods
+# use contrasting hues: blue for learning, teal for optimization, violet for theory.
 - id: multi-agent-path-finding
   label: Multi-Agent Path Finding
   color: '#c6283d'
-  phrases: [multi agent path finding, multi-agent pathfinding, mapf, conflict based search, symmetry breaking, symmetry reasoning, multi robot path planning, priority based search, pbs, prioritized planning, collision free, conflict free]
+  phrases: [multi agent path finding, multi-agent pathfinding, mapf, conflict based search, cbs, priority based search, pbs, prioritized planning, collision free, conflict free]
 - id: multi-robot-coordination
   label: Task Allocation & Coordination
-  color: '#b66b45'
-  phrases: [task allocation, task assignment, target assignment, pickup and delivery, mapd, anonymous, shelf rearrangement, rearrangement, formation, sortation, scheduling, multi robot coordination, multi agent systems, vehicle routing]
+  color: '#cc7835'
+  phrases: [task allocation, task assignment, target assignment, pickup and delivery, mapd, anonymous, shelf rearrangement, rearrangement, formation, sortation, scheduling]
 - id: motion-planning
-  label: Motion Planning & Optimization
-  color: '#b65f7c'
-  phrases: [motion planning, path planning, trajectory planning, trajectory optimization, convex sets, route optimization, kinematic constraints, mixed integer, tsp, traveling salesman, combinatorial optimization]
+  label: Motion Planning & Trajectory Optimization
+  color: '#c65379'
+  phrases: [motion planning, path planning, trajectory planning, trajectory optimization, convex sets, kinematic constraints, kinodynamic, convex optimization]
 - id: coverage-inspection
   label: Coverage & Inspection
-  color: '#6e72a8'
+  color: '#b39432'
   phrases: [coverage, mcpp, coverage path planning, inspection, inspections, inspecting, surveillance]
 - id: learning-and-decision-making
   label: Learning & Decision-Making
-  color: '#895b99'
+  color: '#377fc2'
   phrases: [reinforcement learning, rl, machine learning, training, q learning, actor critic, pomdp, pomdps, markov decision, reward, policy learning, foundation models, mean field, neural network, graph convolution]
+- id: combinatorial-optimization
+  label: Combinatorial Optimization
+  color: '#268c83'
+  phrases: [combinatorial optimization, discrete optimization, route optimization, traveling salesman, travelling salesman, tsp, vehicle routing, route optimization, integer programming, mixed integer, branch and bound, set cover, network flow, matching problem, local search, large neighborhood search, metaheuristic, tabu search, simulated annealing, genetic algorithm, evolutionary algorithm]
+- id: plan-execution
+  label: Plan Execution & Robustness
+  color: '#d66b59'
+  phrases: [execution, plan execution, execution framework, execution policies, execution schedule, execution schedules, execution aware, delay probabilities, imperfect execution, imperfect plan execution, robust execution, replanning, re planning, temporal network, temporal networks]
 - id: complexity-theory
   label: Complexity & Theory
-  color: '#80505b'
+  color: '#8052b3'
   phrases: [computational complexity, complexity results, complexity analysis, hardness, np hard, np hardness, np complete, np completeness, pspace hard, pspace complete, inapproximability, approximation hardness, approximation ratio, approximation guarantees, competitive analysis, competitive ratio, theoretical analysis, theoretical guarantees, lower bounds, worst case analysis, asymptotic bounds]
 - id: other
   label: Other Research

@@ -48,6 +48,9 @@ module AIRob
           score.positive? && (i.zero? || (score >= 2 && score >= ranked.first[1] * 0.2))
         end.map(&:first)
         assigned = overrides.empty? ? (automatic.empty? ? ['other'] : automatic) : overrides.uniq
+        # MAPF is a broad background theme: use it as primary only on its own.
+        # Preserve the ranking (or override order) of every other theme.
+        assigned = assigned.reject { |id| id == 'multi-agent-path-finding' } + ['multi-agent-path-finding'] if assigned.size > 1 && assigned.include?('multi-agent-path-finding')
         counts << (tokens(title) * 3 + tokens(abstract)).tally
         { 'id' => entry.key.to_s, 'title' => title, 'year' => entry[:year].to_s,
           'themes' => assigned, 'theme' => assigned.first, 'manual' => !overrides.empty?,
@@ -78,24 +81,29 @@ module AIRob
         { 'source' => nodes[i]['id'], 'target' => nodes[j]['id'], 'weight' => score.round(4) }
       end
 
-      # Soft, overlapping theme anchors; papers with several themes sit between
-      # their anchors. Similarity springs and repulsion determine local structure.
+      # Cluster by primary theme (the dot color). Secondary themes add a small
+      # positional influence; cross-theme links remain visible but exert less pull.
       active = themes.select { |theme| nodes.any? { |node| node['themes'].include?(theme['id']) } }
       centers = active.each_with_index.to_h do |theme, i|
         angle = 2 * Math::PI * i / active.size - Math::PI / 2
-        [theme['id'], [500 + 250 * Math.cos(angle), 300 + 150 * Math.sin(angle)]]
+        [theme['id'], [500 + 230 * Math.cos(angle), 310 + 135 * Math.sin(angle)]]
       end
       random = Random.new(42)
       targets = nodes.map do |node|
-        anchors = node['themes'].map { |id| centers.fetch(id) }
-        [0, 1].map { |axis| anchors.sum { |anchor| anchor[axis] } / anchors.size }
+        primary = centers.fetch(node['theme'])
+        secondary = node['themes'].reject { |id| id == node['theme'] }.map { |id| centers.fetch(id) }
+        if secondary.empty?
+          primary.dup
+        else
+          [0, 1].map { |axis| primary[axis] * 0.85 + secondary.sum { |anchor| anchor[axis] } / secondary.size * 0.15 }
+        end
       end
       positions = targets.map { |target| target.map { |v| v + random.rand(-100.0..100.0) } }
       index = nodes.each_with_index.to_h { |node, i| [node['id'], i] }
       500.times do
         forces = nodes.map.with_index do |node, i|
           center = targets[i]
-          [(center[0] - positions[i][0]) * 0.008, (center[1] - positions[i][1]) * 0.008]
+          [(center[0] - positions[i][0]) * 0.06, (center[1] - positions[i][1]) * 0.06]
         end
         nodes.each_index do |i|
           ((i + 1)...nodes.size).each do |j|
@@ -110,7 +118,8 @@ module AIRob
         links.each do |link|
           i, j = index.fetch(link['source']), index.fetch(link['target'])
           distance = Math.hypot(positions[j][0] - positions[i][0], positions[j][1] - positions[i][1])
-          spring = (distance - 55) / [distance, 1].max * 0.025
+          strength = nodes[i]['theme'] == nodes[j]['theme'] ? 0.025 : 0.006
+          spring = (distance - 55) / [distance, 1].max * strength
           2.times do |axis|
             force = (positions[j][axis] - positions[i][axis]) * spring
             forces[i][axis] += force; forces[j][axis] -= force
@@ -124,7 +133,7 @@ module AIRob
       end
       # Give the network a modest horizontal emphasis, then fit it into the canvas.
       unless positions.empty?
-        positions.map! { |x, y| [500 + (x - 500) * 1.15, y] }
+        positions.map! { |x, y| [500 + (x - 500) * 1.45, y] }
         xs, ys = positions.transpose
         scale = [840.0 / [xs.max - xs.min, 1].max, 470.0 / [ys.max - ys.min, 1].max, 2.5].min
         mid_x, mid_y = (xs.min + xs.max) / 2, (ys.min + ys.max) / 2

@@ -17,6 +17,10 @@ entries = BibTeX.parse(<<~BIB).entries.values
   @article{manual, title = {Visual Mapping}, themes = {motion-planning, coverage-inspection}, year = {2025}}
   @article{theory, title = {A Competitive Analysis of Online Multi-Agent Path Finding}, year = {2025}}
   @article{hardness, title = {Multi-Agent Path Finding is NP-Hard}, year = {2025}}
+  @article{combinatorial, title = {Combinatorial Optimization with Integer Programming}, year = {2025}}
+  @article{tsp, title = {Solving the Traveling Salesman Problem}, year = {2025}}
+  @article{execution, title = {Robust Plan Execution for Multi-Agent Path Finding with Delay Probabilities}, year = {2025}}
+  @article{manual_mapf, title = {Example}, themes = {multi-agent-path-finding, plan-execution, complexity-theory}, year = {2025}}
   @article{unknown, title = {Annual Activity Report}, year = {2023}}
   @article{cross, title = {Reinforcement Learning for Multi-Agent Path Finding and Motion Planning}, year = {2025}}
   @article{broad, title = {Coverage and Motion Planning with Reinforcement Learning for Multi-Agent Path Finding and Task Assignment}, year = {2025}}
@@ -33,6 +37,14 @@ check(by_id['manual']['themes'] == %w[motion-planning coverage-inspection], 'Man
 check(by_id['theory']['themes'].include?('complexity-theory'), 'Competitive analysis must match Complexity & Theory')
 check(by_id['hardness']['themes'].include?('complexity-theory'), 'Hyphenated NP-hard titles must match Complexity & Theory')
 check(!by_id['mapf']['themes'].include?('complexity-theory'), 'Ordinary MAPF papers should not automatically count as theory')
+check(by_id['combinatorial']['themes'].include?('combinatorial-optimization'), 'Combinatorial optimization must match its own theme')
+check(by_id['tsp']['themes'].include?('combinatorial-optimization'), 'Traveling salesman papers should match combinatorial optimization')
+check(!by_id['mapf']['themes'].include?('combinatorial-optimization'), 'MAPF alone should not imply the combinatorial optimization theme')
+check(by_id['execution']['theme'] == 'plan-execution', 'Execution should be primary over MAPF')
+check(by_id['execution']['themes'].include?('multi-agent-path-finding'), 'MAPF membership must be preserved')
+check(by_id['theory']['theme'] == 'complexity-theory', 'Theory should be primary over MAPF')
+check(by_id['manual_mapf']['themes'] == %w[plan-execution complexity-theory multi-agent-path-finding], 'Manual overrides must also deprioritize MAPF while preserving other theme order')
+check(by_id['weak']['theme'] == 'multi-agent-path-finding', 'MAPF-only papers must keep MAPF as primary')
 check(by_id['unknown']['theme'] == 'other', 'Unmatched papers must not receive an arbitrary theme')
 check(by_id['cross']['themes'].size == 3, 'Clearly interdisciplinary papers should receive three themes')
 check(by_id['broad']['themes'].size == 5, 'All well-supported themes should be retained without a fixed cap')
@@ -52,6 +64,7 @@ end
 real = BibTeX.open(File.expand_path('../_bibliography/publications.bib', __dir__)).entries.values
 graph = AIRob::PublicationGraph.build(real, themes)
 ids = graph['nodes'].map { |node| node['id'] }
+check(graph['nodes'].none? { |node| node['theme'] == 'multi-agent-path-finding' && node['themes'].size > 1 }, 'MAPF may only be primary when it is the only theme')
 check(ids.sort == real.map { |entry| entry.key.to_s }.sort, 'Every bibliography entry must appear exactly once')
 degree = Hash.new(0)
 graph['links'].each do |link|

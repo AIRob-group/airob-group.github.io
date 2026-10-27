@@ -23,6 +23,9 @@
 .publication-network-edge { fill: none; stroke: var(--network-ink); opacity: .24; pointer-events: none; transition: opacity .18s, stroke-width .18s; }
 .publication-network-edge.is-active { opacity: .92; stroke-width: 2.4; }
 .publication-network-edge.is-dimmed { opacity: .035; }
+.publication-network-cluster-label { font-size: 14px; font-weight: 500; letter-spacing: .025em; opacity: .6; pointer-events: none; user-select: none; paint-order: stroke; stroke: var(--global-card-bg-color); stroke-width: 4px; stroke-linejoin: round; transition: opacity .18s; }
+.publication-network-cluster-label.is-dimmed { opacity: .18; }
+html[data-theme="dark"] .publication-network-cluster-label { filter: brightness(1.5); }
 .publication-network-node { transition: opacity .18s; outline: none; }
 .publication-network-node.is-dimmed { opacity: .16; }
 .publication-network-dot { stroke: var(--global-card-bg-color); stroke-width: 1.6; }

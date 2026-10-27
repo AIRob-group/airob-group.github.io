@@ -30,7 +30,9 @@
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       return response.json();
     })
-    .then(data => {
+    .then(async data => {
+      // Measure labels after web fonts settle so collision checks use final sizes.
+      if (document.fonts) await document.fonts.ready;
       const themes = new Map(data.themes.map(theme => [theme.id, theme]));
       const nodes = new Map(data.nodes.map(node => [node.id, node]));
       if (data.nodes.length) {
@@ -44,6 +46,7 @@
       const edgeElements = [];
       const nodeElements = [];
       const buttons = [];
+      const clusterLabels = [];
       let hovered = null;
       let focused = null;
       let selectedTheme = 'all';
@@ -51,8 +54,52 @@
       let currentSummary = summary;
       const matches = node => selectedTheme === 'all' || node.themes.includes(selectedTheme);
       const edgeLayer = element('g', { 'aria-hidden': 'true' });
+      const labelLayer = element('g', { 'aria-hidden': 'true' });
       const nodeLayer = element('g', {});
-      svg.append(edgeLayer, nodeLayer);
+      svg.append(edgeLayer, labelLayer, nodeLayer);
+      // Position labels near their primary-color clusters, avoiding dots and
+      // previously placed labels. Secondary-only themes use all matching papers.
+      const occupiedLabels = [];
+      const overlaps = (a, b, pad = 0) => a.x < b.x + b.width + pad && a.x + a.width + pad > b.x && a.y < b.y + b.height + pad && a.y + a.height + pad > b.y;
+      const view = svg.viewBox.baseVal;
+      data.themes.map(theme => {
+        const primary = data.nodes.filter(node => node.theme === theme.id);
+        const members = primary.length ? primary : data.nodes.filter(node => node.themes.includes(theme.id));
+        return { theme, members };
+      }).filter(group => group.members.length).sort((a, b) => b.members.length - a.members.length).forEach(({ theme, members }) => {
+        const center = { x: members.reduce((sum, node) => sum + node.x, 0) / members.length, y: members.reduce((sum, node) => sum + node.y, 0) / members.length };
+        const label = element('text', { class: 'publication-network-cluster-label', fill: theme.color, 'text-anchor': 'middle' });
+        const lines = [''];
+        theme.label.split(' ').forEach(word => {
+          const last = lines.length - 1;
+          if (lines[last] && lines[last].length + word.length + 1 > 23) lines.push(word);
+          else lines[last] += (lines[last] ? ' ' : '') + word;
+        });
+        lines.forEach((line, i) => {
+          const span = element('tspan', { x: 0, dy: i ? 17 : 0 });
+          span.textContent = line;
+          label.append(span);
+        });
+        labelLayer.append(label);
+        const bounds = label.getBBox();
+        const candidates = [];
+        for (const radius of [25, 45, 70, 100, 140]) {
+          for (let step = 0; step < 16; step++) {
+            const angle = step * Math.PI / 8 - Math.PI / 2;
+            const x = Math.max(view.x + bounds.width / 2 + 8, Math.min(center.x + Math.cos(angle) * radius, view.x + view.width - bounds.width / 2 - 8));
+            const y = Math.max(view.y - bounds.y + 8, Math.min(center.y + Math.sin(angle) * radius, view.y + view.height - bounds.height - bounds.y - 8));
+            const box = { x: x + bounds.x, y: y + bounds.y, width: bounds.width, height: bounds.height };
+            const dots = data.nodes.filter(node => overlaps(box, { x: node.x - 14, y: node.y - 14, width: 28, height: 28 })).length;
+            const labels = occupiedLabels.filter(other => overlaps(box, other, 10)).length;
+            candidates.push({ x, y, box, score: labels * 100000 + dots * 10000 + Math.hypot(x - center.x, y - center.y) });
+          }
+        }
+        candidates.sort((a, b) => a.score - b.score);
+        const best = candidates[0];
+        label.setAttribute('transform', `translate(${best.x}, ${best.y})`);
+        occupiedLabels.push(best.box);
+        clusterLabels.push({ label, theme });
+      });
       data.links.forEach(link => {
         const source = nodes.get(link.source);
         const target = nodes.get(link.target);
@@ -84,6 +131,9 @@
           edge.classList.toggle('is-dimmed', Boolean(selected && !connected));
           // Draw highlighted arcs last so they remain legible over other links.
           if (selected && connected) edgeLayer.append(edge);
+        });
+        clusterLabels.forEach(({ label, theme }) => {
+          label.classList.toggle('is-dimmed', Boolean(selected && !selected.themes.includes(theme.id)));
         });
         tooltip.hidden = !selected;
         if (!selected) {
@@ -180,6 +230,7 @@
       });
       const filter = id => {
         selectedTheme = id;
+        clusterLabels.forEach(({ label, theme }) => { label.style.display = id === 'all' || theme.id === id ? '' : 'none'; });
         hovered = null;
         focused = null;
         nodeElements.forEach(({ anchor, node }) => { anchor.style.display = matches(node) ? '' : 'none'; });

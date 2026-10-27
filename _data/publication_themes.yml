@@ -14,11 +14,11 @@
 - id: motion-planning
   label: Motion Planning & Trajectory Optimization
   color: '#c65379'
-  phrases: [motion planning, path planning, trajectory planning, trajectory optimization, convex sets, kinematic constraints, kinodynamic, convex optimization]
+  phrases: [motion planning, trajectory planning, trajectory optimization, continuous trajectory, convex sets, gcs, kinematic constraints, kinodynamic, convex optimization, holonomic]
 - id: coverage-inspection
   label: Coverage & Inspection
   color: '#b39432'
-  phrases: [coverage, mcpp, coverage path planning, inspection, inspections, inspecting, surveillance]
+  phrases: [coverage, mcpp, coverage path planning, inspection, inspections, inspecting, inspection task, surveillance]
 - id: learning-and-decision-making
   label: Learning & Decision-Making
   color: '#377fc2'
@@ -26,7 +26,7 @@
 - id: combinatorial-optimization
   label: Combinatorial Optimization
   color: '#268c83'
-  phrases: [combinatorial optimization, discrete optimization, route optimization, traveling salesman, travelling salesman, tsp, vehicle routing, route optimization, integer programming, mixed integer, branch and bound, set cover, network flow, matching problem, local search, large neighborhood search, metaheuristic, tabu search, simulated annealing, genetic algorithm, evolutionary algorithm]
+  phrases: [combinatorial optimization, discrete optimization, route optimization, traveling salesman, travelling salesman, tsp, vehicle routing, route optimization, integer programming, mixed integer, set cover, network flow, matching problem, local search, large neighborhood search, metaheuristic, tabu search, simulated annealing, genetic algorithm, evolutionary algorithm]
 - id: plan-execution
   label: Plan Execution & Robustness
   color: '#d66b59'

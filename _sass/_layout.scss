@@ -36,9 +36,15 @@ body.sticky-bottom-footer {
 }
 
 @media screen and (min-width: 1100px) {
-  .projects .people-card-row > * {
-    flex: 0 0 calc(100% / 6);
-    max-width: calc(100% / 6);
+  .projects .people-card-row > *,
+  .projects .people-director-card {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+
+  .projects .people-director-bio {
+    flex: 0 0 80%;
+    max-width: 80%;
   }
 }
 

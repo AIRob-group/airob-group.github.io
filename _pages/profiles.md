@@ -16,7 +16,7 @@ PI:
 
 <div class="projects">
   <div class="row row-cols-1 row-cols-md-4 align-items-start">
-    <div class="col-md-3 text-center mb-1">
+    <div class="col-md-3 people-director-card text-center mb-3">
       <a href="https://www2.cs.sfu.ca/~hangma/">
         <div class="card h-100 hoverable">
         {% assign profile_image_path = page.PI.image | prepend: 'assets/img/profiles/' %}
@@ -36,7 +36,7 @@ PI:
         </div>
       </a>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 people-director-bio">
       <h2>Hang Ma</h2>
       <p class="mb-1">
         Director, AIRob Lab<br>

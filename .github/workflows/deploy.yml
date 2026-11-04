@@ -92,10 +92,11 @@ jobs:
           value: ${{ github.repository }}
       - name: Install and Build 🔧
         run: |
+          sudo apt-get update && sudo apt-get install -y imagemagick
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec ruby _scripts/test-publication-graph.rb
-          bundle exec jekyll build
+          bundle exec jekyll build --profile
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss

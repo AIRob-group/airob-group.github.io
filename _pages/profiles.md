@@ -62,7 +62,7 @@ PI:
 
 <h2 class="category text-muted text-left">Ph.D. Students</h2>
 <hr>
-<div class="row row-cols-1 row-cols-md-4">
+<div class="row row-cols-1 row-cols-md-4 row-cols-xl-6">
 {% for profile in phd_profiles %}
 {% include people_card.liquid %}
 {% endfor %}
@@ -77,7 +77,7 @@ PI:
 
 <h2 class="category text-muted text-left">M.Sc. Students</h2>
 <hr>
-<div class="row row-cols-1 row-cols-md-4">
+<div class="row row-cols-1 row-cols-md-4 row-cols-xl-6">
 {% for profile in masters_profiles %}
 {% include people_card.liquid %}
 {% endfor %}
@@ -91,7 +91,7 @@ PI:
 {% if undergrad_profiles.size > 0 %}
 
 <h2 class="category text-muted text-left">Undergraduate Students</h2>
-<div class="row row-cols-1 row-cols-md-4">
+<div class="row row-cols-1 row-cols-md-4 row-cols-xl-6">
 {% for profile in undergrad_profiles %}
 {% include people_card.liquid %}
 {% endfor %}
@@ -105,7 +105,7 @@ PI:
 {% if visitor_profiles.size > 0 %}
 
 <h2 class="category text-muted text-left">Visitors</h2>
-<div class="row row-cols-1 row-cols-md-4">
+<div class="row row-cols-1 row-cols-md-4 row-cols-xl-6">
 {% for profile in visitor_profiles %}
 {% include people_card.liquid %}
 {% endfor %}
@@ -119,7 +119,7 @@ PI:
 {% if alumni_profiles.size > 0 %}
 
 <h2 class="category text-muted text-left">Alumni</h2>
-<div class="row row-cols-1 row-cols-md-4">
+<div class="row row-cols-1 row-cols-md-4 row-cols-xl-6">
 {% for profile in alumni_profiles %}
 {% include people_card.liquid %}
 {% endfor %}

@@ -16,7 +16,7 @@ PI:
 
 <div class="projects">
   <div class="row row-cols-1 row-cols-md-4 align-items-start">
-    <div class="col-md-3 text-center mb-3">
+    <div class="col-md-3 people-director-card text-center mb-3">
       <a href="https://www2.cs.sfu.ca/~hangma/">
         <div class="card h-100 hoverable">
         {% assign profile_image_path = page.PI.image | prepend: 'assets/img/profiles/' %}
@@ -36,7 +36,7 @@ PI:
         </div>
       </a>
     </div>
-    <div class="col-md-9">
+    <div class="col-md-9 people-director-bio">
       <h2>Hang Ma</h2>
       <p class="mb-1">
         Director, AIRob Lab<br>
@@ -62,7 +62,7 @@ PI:
 
 <h2 class="category text-muted text-left">Ph.D. Students</h2>
 <hr>
-<div class="row row-cols-1 row-cols-md-4">
+<div class="row row-cols-1 row-cols-md-4 people-card-row">
 {% for profile in phd_profiles %}
 {% include people_card.liquid %}
 {% endfor %}
@@ -77,7 +77,7 @@ PI:
 
 <h2 class="category text-muted text-left">M.Sc. Students</h2>
 <hr>
-<div class="row row-cols-1 row-cols-md-4">
+<div class="row row-cols-1 row-cols-md-4 people-card-row">
 {% for profile in masters_profiles %}
 {% include people_card.liquid %}
 {% endfor %}
@@ -91,7 +91,7 @@ PI:
 {% if undergrad_profiles.size > 0 %}
 
 <h2 class="category text-muted text-left">Undergraduate Students</h2>
-<div class="row row-cols-1 row-cols-md-4">
+<div class="row row-cols-1 row-cols-md-4 people-card-row">
 {% for profile in undergrad_profiles %}
 {% include people_card.liquid %}
 {% endfor %}
@@ -105,7 +105,7 @@ PI:
 {% if visitor_profiles.size > 0 %}
 
 <h2 class="category text-muted text-left">Visitors</h2>
-<div class="row row-cols-1 row-cols-md-4">
+<div class="row row-cols-1 row-cols-md-4 people-card-row">
 {% for profile in visitor_profiles %}
 {% include people_card.liquid %}
 {% endfor %}
@@ -119,7 +119,7 @@ PI:
 {% if alumni_profiles.size > 0 %}
 
 <h2 class="category text-muted text-left">Alumni</h2>
-<div class="row row-cols-1 row-cols-md-4">
+<div class="row row-cols-1 row-cols-md-4 people-card-row">
 {% for profile in alumni_profiles %}
 {% include people_card.liquid %}
 {% endfor %}
